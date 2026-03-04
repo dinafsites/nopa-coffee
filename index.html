@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>NOPA Coffee & Eatery</title>
 
@@ -11,34 +11,21 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins;
-}
-
 body{
+font-family:Poppins;
+margin:0;
 background:#fafafa;
-color:#222;
 }
-
-/* HEADER */
 
 header{
-position:fixed;
-width:100%;
-background:white;
-padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 3px 12px rgba(0,0,0,0.1);
-z-index:1000;
-}
-
-header img{
-height:40px;
+padding:20px 8%;
+background:white;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
 }
 
 nav a{
@@ -48,62 +35,52 @@ color:#333;
 font-weight:500;
 }
 
-/* HERO */
-
 .hero{
-height:100vh;
- background:url("food1.jpg")center/cover;
+height:70vh;
+background:url("food1.jpg") center/cover;
 display:flex;
-justify-content:center;
 align-items:center;
-text-align:center;
+justify-content:center;
 color:white;
+font-size:50px;
+font-weight:600;
+text-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
-
-.hero h1{
-font-size:60px;
-background:rgba(0,0,0,0.6);
-padding:25px 35px;
-border-radius:12px;
-}
-
-/* SECTIONS */
 
 .section{
-padding:110px 10%;
+padding:80px 10%;
 }
 
 .title{
-font-size:36px;
-margin-bottom:40px;
-text-align:center;
+font-size:35px;
+margin-bottom:30px;
 }
 
-/* MENU */
-
-.menu{
+.menu-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.card{
+.menu-item{
 background:white;
+padding:20px;
 border-radius:12px;
-padding:25px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
-.card:hover{
-transform:translateY(-10px);
+.menu-item h4{
+margin:0;
 }
 
-/* GALLERY */
+.price{
+color:#9c1c28;
+font-weight:600;
+}
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
 }
 
@@ -112,56 +89,34 @@ width:100%;
 border-radius:12px;
 }
 
-/* RESERVE */
-
 .reserve{
 background:#9c1c28;
 color:white;
 text-align:center;
-padding:90px 20px;
+padding:80px 20px;
 }
 
 .reserve a{
 background:white;
 color:#9c1c28;
-padding:16px 35px;
-margin-top:20px;
-display:inline-block;
+padding:14px 30px;
 text-decoration:none;
 border-radius:8px;
 font-weight:600;
 }
 
-/* MAP */
-
 .map iframe{
 width:100%;
-height:420px;
+height:400px;
 border:0;
 border-radius:10px;
 }
-
-/* FOOTER */
 
 footer{
 background:#111;
 color:white;
 text-align:center;
 padding:30px;
-}
-
-/* BUTTON */
-
-.wolt{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#00c2e8;
-color:white;
-padding:14px 18px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
 }
 
 </style>
@@ -172,53 +127,161 @@ font-weight:600;
 
 <header>
 
-<img src="logo.png" style="height:50px">
+<img src="logo.png" height="50">
 
 <nav>
-
 <a href="#menu">Menu</a>
 <a href="#gallery">Gallery</a>
 <a href="#reserve">Reserve</a>
 <a href="#location">Location</a>
-
 </nav>
 
 </header>
 
 <div class="hero">
-
-<h1>NOPA Coffee & Eatery</h1>
-
+NOPA Coffee & Eatery
 </div>
 
 <div class="section" id="menu">
 
-<h2 class="title">Popular Menu</h2>
-
-<div class="menu">
-
-<div class="card">
-<h3>Salmon Sushi Bowl</h3>
-<p>Fresh salmon bowl</p>
-<b>11 ₼</b>
+<h2 class="title">Sendviçlər</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Pendirli Kruassan</h4><span class="price">7 ₼</span></div>
+  <div class="menu-item"><h4>Qızılbalıqlı Kruassan</h4><span class="price">9.5 ₼</span></div>
+  <div class="menu-item"><h4>Sezar Soslu Toyuq Wrap</h4><span class="price">7.5 ₼</span></div>
+  <div class="menu-item"><h4>Pesto Soslu Toyuq Wrap</h4><span class="price">7.5 ₼</span></div>
+  <div class="menu-item"><h4>Sezar Toyuq Çiabatta Çörəyində</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Pesto Toyuq Çiabatta Çörəyində</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Beef Cheddar Çiabatta Çörəyində</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Hindi Fümə Cheddar Tiger Çörəyində</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Kapya Bibər Vetçina Tiger Çörəyində</h4><span class="price">8 ₼</span></div>
 </div>
 
-<div class="card">
-<h3>Chicken Caesar Wrap</h3>
-<p>Chicken & caesar sauce</p>
-<b>7.5 ₼</b>
+<h2 class="title">Salat & Bowl</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Sushi Salmon Bowl</h4><span class="price">11 ₼</span></div>
+  <div class="menu-item"><h4>Toyuqlu Sezar Salat</h4><span class="price">9 ₼</span></div>
+  <div class="menu-item"><h4>Krevetli Sezar Salat</h4><span class="price">12 ₼</span></div>
+  <div class="menu-item"><h4>Sweet Chilli Beef Salad</h4><span class="price">9.5 ₼</span></div>
 </div>
 
-<div class="card">
-<h3>Lotus Croissant</h3>
-<p>Dessert</p>
-<b>5.5 ₼</b>
+<h2 class="title">Kruassan</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Lotus Kruassan</h4><span class="price">5.5 ₼</span></div>
+  <div class="menu-item"><h4>Fıstıqlı Kruassan</h4><span class="price">5.5 ₼</span></div>
+  <div class="menu-item"><h4>Şokoladlı Kruassan</h4><span class="price">5.5 ₼</span></div>
 </div>
 
-<div class="card">
-<h3>Classic Latte</h3>
-<p>Signature coffee</p>
-<b>6 ₼</b>
+<h2 class="title">Dessertlər</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Chocolatin</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Bounty Cake</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>San Sebastian</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Şokolad Berliner</h4><span class="price">4.5 ₼</span></div>
+  <div class="menu-item"><h4>Karamel Berliner</h4><span class="price">4.5 ₼</span></div>
+  <div class="menu-item"><h4>Oreo Stick Cheesecake</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Lavanda Dream Cake</h4><span class="price">8.5 ₼</span></div>
+</div>
+
+<h2 class="title">Şəkər & Qlutensiz Dessertlər</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Napoleon</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Meyvəli Napoleon</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Tiramisu</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Ballı Tort</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Diet San Sebastian</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Pistachio San Sebastian</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Lotus Cheesecake</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Karamel Cheesecake</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Malina Cheesecake</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Pistachio Krep</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Giləmeyvə Krep</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Çiyələk Krep</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Şokoladlı Krep</h4><span class="price">8.5 ₼</span></div>
+</div>
+
+<h2 class="title">Klassik Qəhvə</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Double Espresso</h4><span class="price">4 ₼</span></div>
+  <div class="menu-item"><h4>Americano</h4><span class="price">5 ₼</span></div>
+  <div class="menu-item"><h4>Cortado</h4><span class="price">5.5 ₼</span></div>
+  <div class="menu-item"><h4>Cappuccino</h4><span class="price">6.5 ₼</span></div>
+  <div class="menu-item"><h4>Latte</h4><span class="price">6.5 ₼</span></div>
+  <div class="menu-item"><h4>Flat White</h4><span class="price">6 ₼</span></div>
+</div>
+
+<h2 class="title">Frappe</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Sweet Cookie</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>White Strawberry</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Special Nut</h4><span class="price">8.5 ₼</span></div>
+</div>
+
+<h2 class="title">Lemonade</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Italian Soda</h4><span class="price">6.5 ₼</span></div>
+  <div class="menu-item"><h4>Iced Tea</h4><span class="price">7.5 ₼</span></div>
+  <div class="menu-item"><h4>Hibiscus Strawberry</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Cool Mint</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Tropical Refresher</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>PineStrawberry Chia</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Passion Fruit Chia</h4><span class="price">8.5 ₼</span></div>
+</div>
+
+<h2 class="title">Milkshake</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Chocolate Cookies</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Strawberry Banana</h4><span class="price">8.5 ₼</span></div>
+  <div class="menu-item"><h4>Golden Caramel</h4><span class="price">8.5 ₼</span></div>
+</div>
+
+<h2 class="title">Soyuq Şokolad</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Mocha</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>White Mocha</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Cold Chocolate</h4><span class="price">8 ₼</span></div>
+</div>
+
+<h2 class="title">Fresh Bar</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Orange</h4><span class="price">7.5 ₼</span></div>
+  <div class="menu-item"><h4>Citrus Mix</h4><span class="price">7.5 ₼</span></div>
+  <div class="menu-item"><h4>Citrus Black</h4><span class="price">9.5 ₼</span></div>
+</div>
+
+<h2 class="title">Çay</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Tea</h4><span class="price">5 ₼</span></div>
+  <div class="menu-item"><h4>Chai Tea Latte</h4><span class="price">7.5 ₼</span></div>
+  <div class="menu-item"><h4>Matcha Latte</h4><span class="price">7.5 ₼</span></div>
+</div>
+
+<h2 class="title">Soyuq Klassik</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Espresso On Ice</h4><span class="price">4 ₼</span></div>
+  <div class="menu-item"><h4>Americano</h4><span class="price">6 ₼</span></div>
+  <div class="menu-item"><h4>Cold Brew</h4><span class="price">6.5 ₼</span></div>
+  <div class="menu-item"><h4>Cappuccino</h4><span class="price">7 ₼</span></div>
+  <div class="menu-item"><h4>Latte</h4><span class="price">7 ₼</span></div>
+</div>
+
+<h2 class="title">Soyuq Xüsusi İçkilər</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Affogato</h4><span class="price">6.5 ₼</span></div>
+  <div class="menu-item"><h4>Spanish Latte</h4><span class="price">7.5 ₼</span></div>
+  <div class="menu-item"><h4>Black Tonic</h4><span class="price">7.5 ₼</span></div>
+  <div class="menu-item"><h4>Salted Caramel Latte</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Raf</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Chai Tea Latte</h4><span class="price">8 ₼</span></div>
+  <div class="menu-item"><h4>Iced Matcha</h4><span class="price">8.5 ₼</span></div>
+</div>
+
+<h2 class="title">Extras</h2>
+<div class="menu-grid">
+  <div class="menu-item"><h4>Syrup</h4><span class="price">2 ₼</span></div>
+  <div class="menu-item"><h4>Extra Shot</h4><span class="price">2.5 ₼</span></div>
+  <div class="menu-item"><h4>Alternative Milk</h4><span class="price">3 ₼</span></div>
+  <div class="menu-item"><h4>Whipped Cream</h4><span class="price">2 ₼</span></div>
 </div>
 
 </div>
@@ -243,11 +306,11 @@ font-weight:600;
 
 <div class="reserve" id="reserve">
 
-<h2>Reserve Your Table</h2>
+<h2>Reserve your table</h2>
 
-<p>Book via WhatsApp</p>
+<p>Contact via WhatsApp</p>
 
-<a href="https://wa.me/994775007997">Reserve Now</a>
+<a href="https://wa.me/994775007997">Reserve</a>
 
 </div>
 
@@ -262,11 +325,10 @@ font-weight:600;
 <footer>
 
 NOPA Coffee & Eatery  
-116 Bahrus Nuriyev street, Baku
+116 Bahrus Nuriyev street  
+077 500 79 97
 
 </footer>
-
-<a class="wolt" href="https://wolt.com/en/aze/baku/restaurant/nopa">Order on Wolt</a>
 
 </body>
 </html>
