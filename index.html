@@ -314,8 +314,7 @@ section{
 
 .menu-card-img{
   height:220px;
-  background:
-    linear-gradient(135deg, #1b1b1b, #3b3b3b);
+  background:linear-gradient(135deg, #1b1b1b, #3b3b3b);
   position:relative;
   overflow:hidden;
 }
@@ -388,6 +387,57 @@ section{
   border-radius:24px;
   box-shadow:var(--shadow);
   min-height:260px;
+}
+
+.qr-section{
+  background:#111;
+  color:white;
+  border-radius:32px;
+  padding:48px 34px;
+  box-shadow:var(--shadow);
+}
+
+.qr-section .section-head h2{
+  color:white;
+}
+
+.qr-section .section-head p{
+  color:rgba(255,255,255,.78);
+}
+
+.qr-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.qr-card{
+  background:#1c1c1c;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:24px;
+  text-align:center;
+}
+
+.qr-card img{
+  width:180px;
+  height:180px;
+  object-fit:contain;
+  margin:0 auto 18px;
+  background:white;
+  padding:10px;
+  border-radius:16px;
+}
+
+.qr-card h3{
+  font-size:20px;
+  margin-bottom:8px;
+  color:#c9a46c;
+}
+
+.qr-card p{
+  color:rgba(255,255,255,.78);
+  font-size:14px;
 }
 
 .cta{
@@ -521,6 +571,10 @@ footer{
     grid-template-columns:1fr;
   }
 
+  .qr-grid{
+    grid-template-columns:1fr;
+  }
+
   nav{
     display:none;
   }
@@ -570,6 +624,7 @@ footer{
     <nav>
       <a href="#menu">Menu</a>
       <a href="#gallery">Gallery</a>
+      <a href="#qr">QR Menu</a>
       <a href="#contact">Location</a>
       <a href="https://www.instagram.com/nopacoffee" target="_blank">Instagram</a>
       <a class="header-btn" href="https://wa.me/994775007997" target="_blank">Reserve</a>
@@ -633,9 +688,41 @@ footer{
     </div>
 
     <div class="gallery">
-      <img src="hero.jpg" alt="NOPA">
-      <img src="gallery1.jpg" alt="NOPA">
-      <img src="gallery2.jpg" alt="NOPA">
+      <img src="hero.jpg" alt="NOPA hero">
+      <img src="gallery1.jpg" alt="NOPA drinks">
+      <img src="gallery2.jpg" alt="NOPA food">
+    </div>
+  </div>
+</section>
+
+<section id="qr">
+  <div class="container">
+    <div class="qr-section">
+      <div class="section-head">
+        <div class="kicker">QR Menu</div>
+        <h2>Scan, open and order faster.</h2>
+        <p>Customers can scan QR codes to open the digital menu, reserve by WhatsApp or order from Wolt.</p>
+      </div>
+
+      <div class="qr-grid">
+        <div class="qr-card">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://feridhesenov17.github.io/nopa-coffee/" alt="QR Menu">
+          <h3>QR Menu</h3>
+          <p>Scan to open the digital menu.</p>
+        </div>
+
+        <div class="qr-card">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://wa.me/994775007997" alt="WhatsApp QR">
+          <h3>WhatsApp</h3>
+          <p>Scan to reserve or contact directly.</p>
+        </div>
+
+        <div class="qr-card">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://wolt.com/en/aze/baku/restaurant/nopa" alt="Wolt QR">
+          <h3>Wolt</h3>
+          <p>Scan to open online ordering.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
