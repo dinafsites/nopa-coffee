@@ -69,11 +69,12 @@ header{
 }
 
 .nav{
-  height:84px;
+  min-height:84px;
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:24px;
+  padding:12px 0;
 }
 
 .logo-wrap{
@@ -106,9 +107,15 @@ header{
   font-weight:600;
 }
 
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
 nav{
   display:flex;
-  gap:22px;
+  gap:20px;
   align-items:center;
 }
 
@@ -127,6 +134,32 @@ nav a:hover{
   color:white;
   padding:12px 18px;
   border-radius:999px;
+}
+
+.lang-switcher{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  background:white;
+  padding:6px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.lang-btn{
+  border:0;
+  background:transparent;
+  padding:8px 10px;
+  border-radius:999px;
+  font-weight:900;
+  cursor:pointer;
+  color:#333;
+}
+
+.lang-btn.active{
+  background:var(--brand);
+  color:white;
 }
 
 .hero{
@@ -578,6 +611,14 @@ footer{
   nav{
     display:none;
   }
+
+  .nav{
+    align-items:flex-start;
+  }
+
+  .nav-right{
+    margin-left:auto;
+  }
 }
 
 @media(max-width:650px){
@@ -605,6 +646,15 @@ footer{
     font-size:13px;
     padding:12px 15px;
   }
+
+  .logo-text span{
+    display:none;
+  }
+
+  .lang-btn{
+    padding:7px 8px;
+    font-size:12px;
+  }
 }
 </style>
 </head>
@@ -621,25 +671,33 @@ footer{
       </div>
     </a>
 
-    <nav>
-      <a href="#menu">Menu</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#qr">QR Menu</a>
-      <a href="#contact">Location</a>
-      <a href="https://www.instagram.com/nopacoffee" target="_blank">Instagram</a>
-      <a class="header-btn" href="https://wa.me/994775007997" target="_blank">Reserve</a>
-    </nav>
+    <div class="nav-right">
+      <nav>
+        <a href="#menu" data-i18n="navMenu">Menyu</a>
+        <a href="#gallery" data-i18n="navGallery">Galereya</a>
+        <a href="#qr" data-i18n="navQr">QR Menyu</a>
+        <a href="#contact" data-i18n="navLocation">Məkan</a>
+        <a href="https://www.instagram.com/nopacoffee" target="_blank">Instagram</a>
+        <a class="header-btn" href="https://wa.me/994775007997" target="_blank" data-i18n="navReserve">Rezervasiya</a>
+      </nav>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('az')">AZ</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('ru')">RU</button>
+      </div>
+    </div>
   </div>
 </header>
 
 <section class="hero">
   <div class="container hero-content">
-    <div class="badge">Coffee • Food • Desserts</div>
+    <div class="badge" data-i18n="heroBadge">Qəhvə • Yemək • Dessertlər</div>
     <h1>NOPA Coffee & Eatery</h1>
-    <p>Fresh bowls, sandwiches, desserts, signature drinks and a comfortable indoor & outdoor atmosphere in Baku.</p>
+    <p data-i18n="heroText">Bakıda fresh bowls, sendviçlər, dessertlər, xüsusi içkilər və rahat indoor & outdoor atmosfer.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="https://wa.me/994775007997" target="_blank">Reserve via WhatsApp</a>
-      <a class="btn btn-light" href="#menu">View Menu</a>
+      <a class="btn btn-primary" href="https://wa.me/994775007997" target="_blank" data-i18n="heroReserve">WhatsApp ilə rezervasiya</a>
+      <a class="btn btn-light" href="#menu" data-i18n="heroMenu">Menyunu gör</a>
     </div>
   </div>
 </section>
@@ -647,20 +705,20 @@ footer{
 <div class="container info-strip">
   <div class="info-grid">
     <div class="info-card">
-      <small>Address</small>
+      <small data-i18n="infoAddressTitle">Ünvan</small>
       <strong>116 Bahrus Nuriyev street, Baku</strong>
     </div>
     <div class="info-card">
-      <small>Working hours</small>
-      <strong>Every day • 8AM–12AM</strong>
+      <small data-i18n="infoHoursTitle">İş saatları</small>
+      <strong data-i18n="infoHoursText">Hər gün • 08:00–00:00</strong>
     </div>
     <div class="info-card">
-      <small>Phone</small>
+      <small data-i18n="infoPhoneTitle">Telefon</small>
       <strong>077 500 79 97</strong>
     </div>
     <div class="info-card">
-      <small>Seating</small>
-      <strong>Indoor & outdoor place</strong>
+      <small data-i18n="infoSeatingTitle">Məkan</small>
+      <strong data-i18n="infoSeatingText">İçəri və çöl oturma sahəsi</strong>
     </div>
   </div>
 </div>
@@ -668,9 +726,9 @@ footer{
 <section id="menu">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">Full Menu</div>
-      <h2>Every item with its own image slot.</h2>
-      <p>Each menu card has a separate image file. If the exact photo is uploaded with the correct file name, it will appear automatically.</p>
+      <div class="kicker" data-i18n="menuKicker">Tam Menyu</div>
+      <h2 data-i18n="menuTitle">Hər məhsul üçün ayrıca şəkil yeri.</h2>
+      <p data-i18n="menuText">Hər menyu kartının ayrıca şəkil faylı var. Düzgün fayl adı ilə şəkil yüklənəndə avtomatik görünəcək.</p>
     </div>
 
     <div class="category-tabs" id="tabs"></div>
@@ -682,9 +740,9 @@ footer{
 <section id="gallery">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">Gallery</div>
-      <h2>NOPA atmosphere and real visuals.</h2>
-      <p>Use only real NOPA images here. This prevents wrong product-photo matching.</p>
+      <div class="kicker" data-i18n="galleryKicker">Galereya</div>
+      <h2 data-i18n="galleryTitle">NOPA atmosferi və real görüntülər.</h2>
+      <p data-i18n="galleryText">Burada yalnız real NOPA şəkilləri istifadə olunur ki, məhsul-şəkil qarışıqlığı olmasın.</p>
     </div>
 
     <div class="gallery">
@@ -700,27 +758,27 @@ footer{
     <div class="qr-section">
       <div class="section-head">
         <div class="kicker">QR Menu</div>
-        <h2>Scan, open and order faster.</h2>
-        <p>Customers can scan QR codes to open the digital menu, reserve by WhatsApp or order from Wolt.</p>
+        <h2 data-i18n="qrTitle">Skan et, aç və daha sürətli sifariş et.</h2>
+        <p data-i18n="qrText">Müştərilər QR kodları skan edərək rəqəmsal menyunu aça, WhatsApp ilə rezervasiya edə və Wolt-dan sifariş verə bilər.</p>
       </div>
 
       <div class="qr-grid">
         <div class="qr-card">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://feridhesenov17.github.io/nopa-coffee/" alt="QR Menu">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://dinafsites.github.io/nopa-coffee/" alt="QR Menu">
           <h3>QR Menu</h3>
-          <p>Scan to open the digital menu.</p>
+          <p data-i18n="qrMenuText">Rəqəmsal menyunu açmaq üçün skan edin.</p>
         </div>
 
         <div class="qr-card">
           <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://wa.me/994775007997" alt="WhatsApp QR">
           <h3>WhatsApp</h3>
-          <p>Scan to reserve or contact directly.</p>
+          <p data-i18n="qrWhatsappText">Rezervasiya və əlaqə üçün skan edin.</p>
         </div>
 
         <div class="qr-card">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://dinafsites.github.io/nopa-coffee/" alt="QR Menu">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://wolt.com/en/aze/baku/restaurant/nopa" alt="Wolt QR">
           <h3>Wolt</h3>
-          <p>Scan to open online ordering.</p>
+          <p data-i18n="qrWoltText">Online sifariş səhifəsini açmaq üçün skan edin.</p>
         </div>
       </div>
     </div>
@@ -731,10 +789,10 @@ footer{
   <div class="container">
     <div class="cta">
       <div>
-        <h2>Reserve your table directly.</h2>
-        <p>Customers can contact NOPA through WhatsApp and get location information from one clean page.</p>
+        <h2 data-i18n="ctaTitle">Masanızı birbaşa rezerv edin.</h2>
+        <p data-i18n="ctaText">Müştərilər WhatsApp ilə NOPA ilə əlaqə saxlaya və məkan məlumatını bir səhifədən rahat tapa bilər.</p>
       </div>
-      <a class="btn btn-light" href="https://wa.me/994775007997" target="_blank">Reserve Now</a>
+      <a class="btn btn-light" href="https://wa.me/994775007997" target="_blank" data-i18n="ctaButton">Rezervasiya et</a>
     </div>
   </div>
 </section>
@@ -742,19 +800,19 @@ footer{
 <section id="contact">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">Location</div>
-      <h2>Visit NOPA Coffee & Eatery.</h2>
-      <p>Address, phone, WhatsApp and map are all placed clearly.</p>
+      <div class="kicker" data-i18n="locationKicker">Məkan</div>
+      <h2 data-i18n="locationTitle">NOPA Coffee & Eatery-ni ziyarət edin.</h2>
+      <p data-i18n="locationText">Ünvan, telefon, WhatsApp və xəritə hamısı aydın şəkildə yerləşdirilib.</p>
     </div>
 
     <div class="contact-grid">
       <div class="contact-card">
         <div>
-          <small>Address</small>
+          <small data-i18n="contactAddress">Ünvan</small>
           <p>116 Bahrus Nuriyev street, Baku, Azerbaijan</p>
         </div>
         <div>
-          <small>Phone</small>
+          <small data-i18n="contactPhone">Telefon</small>
           <a href="tel:+994775007997">077 500 79 97</a>
         </div>
         <div>
@@ -766,8 +824,8 @@ footer{
           <a href="https://www.instagram.com/nopacoffee" target="_blank">@nopacoffee</a>
         </div>
         <div>
-          <small>Hours</small>
-          <p>Every day • 8AM–12AM</p>
+          <small data-i18n="contactHours">İş saatları</small>
+          <p data-i18n="contactHoursText">Hər gün • 08:00–00:00</p>
         </div>
       </div>
 
@@ -778,7 +836,7 @@ footer{
 
 <div class="floating">
   <a class="float-btn whatsapp" href="https://wa.me/994775007997" target="_blank">WhatsApp</a>
-  <a class="float-btn wolt" href="https://wolt.com/en/aze/baku/restaurant/nopa" target="_blank">Order on Wolt</a>
+  <a class="float-btn wolt" href="https://wolt.com/en/aze/baku/restaurant/nopa" target="_blank" data-i18n="floatWolt">Wolt sifariş</a>
 </div>
 
 <footer>
@@ -789,6 +847,227 @@ footer{
 </footer>
 
 <script>
+const translations = {
+  az:{
+    navMenu:"Menyu",
+    navGallery:"Galereya",
+    navQr:"QR Menyu",
+    navLocation:"Məkan",
+    navReserve:"Rezervasiya",
+
+    heroBadge:"Qəhvə • Yemək • Dessertlər",
+    heroText:"Bakıda fresh bowls, sendviçlər, dessertlər, xüsusi içkilər və rahat indoor & outdoor atmosfer.",
+    heroReserve:"WhatsApp ilə rezervasiya",
+    heroMenu:"Menyunu gör",
+
+    infoAddressTitle:"Ünvan",
+    infoHoursTitle:"İş saatları",
+    infoHoursText:"Hər gün • 08:00–00:00",
+    infoPhoneTitle:"Telefon",
+    infoSeatingTitle:"Məkan",
+    infoSeatingText:"İçəri və çöl oturma sahəsi",
+
+    menuKicker:"Tam Menyu",
+    menuTitle:"Hər məhsul üçün ayrıca şəkil yeri.",
+    menuText:"Hər menyu kartının ayrıca şəkil faylı var. Düzgün fayl adı ilə şəkil yüklənəndə avtomatik görünəcək.",
+
+    galleryKicker:"Galereya",
+    galleryTitle:"NOPA atmosferi və real görüntülər.",
+    galleryText:"Burada yalnız real NOPA şəkilləri istifadə olunur ki, məhsul-şəkil qarışıqlığı olmasın.",
+
+    qrTitle:"Skan et, aç və daha sürətli sifariş et.",
+    qrText:"Müştərilər QR kodları skan edərək rəqəmsal menyunu aça, WhatsApp ilə rezervasiya edə və Wolt-dan sifariş verə bilər.",
+    qrMenuText:"Rəqəmsal menyunu açmaq üçün skan edin.",
+    qrWhatsappText:"Rezervasiya və əlaqə üçün skan edin.",
+    qrWoltText:"Online sifariş səhifəsini açmaq üçün skan edin.",
+
+    ctaTitle:"Masanızı birbaşa rezerv edin.",
+    ctaText:"Müştərilər WhatsApp ilə NOPA ilə əlaqə saxlaya və məkan məlumatını bir səhifədən rahat tapa bilər.",
+    ctaButton:"Rezervasiya et",
+
+    locationKicker:"Məkan",
+    locationTitle:"NOPA Coffee & Eatery-ni ziyarət edin.",
+    locationText:"Ünvan, telefon, WhatsApp və xəritə hamısı aydın şəkildə yerləşdirilib.",
+    contactAddress:"Ünvan",
+    contactPhone:"Telefon",
+    contactHours:"İş saatları",
+    contactHoursText:"Hər gün • 08:00–00:00",
+
+    floatWolt:"Wolt sifariş",
+
+    all:"Hamısı"
+  },
+
+  en:{
+    navMenu:"Menu",
+    navGallery:"Gallery",
+    navQr:"QR Menu",
+    navLocation:"Location",
+    navReserve:"Reserve",
+
+    heroBadge:"Coffee • Food • Desserts",
+    heroText:"Fresh bowls, sandwiches, desserts, signature drinks and a comfortable indoor & outdoor atmosphere in Baku.",
+    heroReserve:"Reserve via WhatsApp",
+    heroMenu:"View Menu",
+
+    infoAddressTitle:"Address",
+    infoHoursTitle:"Working hours",
+    infoHoursText:"Every day • 8AM–12AM",
+    infoPhoneTitle:"Phone",
+    infoSeatingTitle:"Seating",
+    infoSeatingText:"Indoor & outdoor place",
+
+    menuKicker:"Full Menu",
+    menuTitle:"Every item with its own image slot.",
+    menuText:"Each menu card has a separate image file. If the correct photo is uploaded with the correct file name, it will appear automatically.",
+
+    galleryKicker:"Gallery",
+    galleryTitle:"NOPA atmosphere and real visuals.",
+    galleryText:"Only real NOPA visuals are used here to prevent product-photo confusion.",
+
+    qrTitle:"Scan, open and order faster.",
+    qrText:"Customers can scan QR codes to open the digital menu, reserve by WhatsApp or order from Wolt.",
+    qrMenuText:"Scan to open the digital menu.",
+    qrWhatsappText:"Scan to reserve or contact directly.",
+    qrWoltText:"Scan to open online ordering.",
+
+    ctaTitle:"Reserve your table directly.",
+    ctaText:"Customers can contact NOPA through WhatsApp and get location information from one clean page.",
+    ctaButton:"Reserve now",
+
+    locationKicker:"Location",
+    locationTitle:"Visit NOPA Coffee & Eatery.",
+    locationText:"Address, phone, WhatsApp and map are all placed clearly.",
+    contactAddress:"Address",
+    contactPhone:"Phone",
+    contactHours:"Working hours",
+    contactHoursText:"Every day • 8AM–12AM",
+
+    floatWolt:"Order on Wolt",
+
+    all:"All"
+  },
+
+  ru:{
+    navMenu:"Меню",
+    navGallery:"Галерея",
+    navQr:"QR Меню",
+    navLocation:"Локация",
+    navReserve:"Бронь",
+
+    heroBadge:"Кофе • Еда • Десерты",
+    heroText:"Fresh bowls, сэндвичи, десерты, авторские напитки и уютная атмосфера внутри и снаружи в Баку.",
+    heroReserve:"Забронировать в WhatsApp",
+    heroMenu:"Смотреть меню",
+
+    infoAddressTitle:"Адрес",
+    infoHoursTitle:"Часы работы",
+    infoHoursText:"Каждый день • 08:00–00:00",
+    infoPhoneTitle:"Телефон",
+    infoSeatingTitle:"Место",
+    infoSeatingText:"Места внутри и на улице",
+
+    menuKicker:"Полное меню",
+    menuTitle:"У каждого блюда отдельное место для фото.",
+    menuText:"У каждой карточки меню есть отдельный файл изображения. Если загрузить фото с правильным названием файла, оно появится автоматически.",
+
+    galleryKicker:"Галерея",
+    galleryTitle:"Атмосфера NOPA и реальные фото.",
+    galleryText:"Здесь используются только реальные изображения NOPA, чтобы не было путаницы между продуктом и фото.",
+
+    qrTitle:"Сканируйте, открывайте и заказывайте быстрее.",
+    qrText:"Клиенты могут сканировать QR-коды, чтобы открыть цифровое меню, забронировать через WhatsApp или заказать через Wolt.",
+    qrMenuText:"Сканируйте, чтобы открыть цифровое меню.",
+    qrWhatsappText:"Сканируйте для брони или связи.",
+    qrWoltText:"Сканируйте, чтобы открыть онлайн-заказ.",
+
+    ctaTitle:"Забронируйте стол напрямую.",
+    ctaText:"Клиенты могут связаться с NOPA через WhatsApp и быстро найти информацию о локации на одной странице.",
+    ctaButton:"Забронировать",
+
+    locationKicker:"Локация",
+    locationTitle:"Посетите NOPA Coffee & Eatery.",
+    locationText:"Адрес, телефон, WhatsApp и карта размещены понятно.",
+    contactAddress:"Адрес",
+    contactPhone:"Телефон",
+    contactHours:"Часы работы",
+    contactHoursText:"Каждый день • 08:00–00:00",
+
+    floatWolt:"Заказать на Wolt",
+
+    all:"Все"
+  }
+};
+
+const categoryTranslations = {
+  az:{
+    "Hamısı":"Hamısı",
+    "Sendviçlər":"Sendviçlər",
+    "Salat & Bowl":"Salat & Bowl",
+    "Kruassan":"Kruassan",
+    "Dessertlər":"Dessertlər",
+    "Qlutensiz Dessertlər":"Qlutensiz Dessertlər",
+    "Klassik Qəhvə":"Klassik Qəhvə",
+    "Özəl Dəmləmə":"Özəl Dəmləmə",
+    "Xüsusi İçkilər":"Xüsusi İçkilər",
+    "Şokolad":"Şokolad",
+    "Frappe":"Frappe",
+    "Lemonade":"Lemonade",
+    "Milkshake":"Milkshake",
+    "Soyuq Şokolad":"Soyuq Şokolad",
+    "Fresh Bar":"Fresh Bar",
+    "Çay":"Çay",
+    "Soyuq Klassik":"Soyuq Klassik",
+    "Soyuq Özəl İçki":"Soyuq Özəl İçki",
+    "Extras":"Extras"
+  },
+  en:{
+    "Hamısı":"All",
+    "Sendviçlər":"Sandwiches",
+    "Salat & Bowl":"Salad & Bowl",
+    "Kruassan":"Croissants",
+    "Dessertlər":"Desserts",
+    "Qlutensiz Dessertlər":"Sugar & Gluten-Free Desserts",
+    "Klassik Qəhvə":"Coffee Classics",
+    "Özəl Dəmləmə":"Special Brewing",
+    "Xüsusi İçkilər":"Special Drinks",
+    "Şokolad":"Chocolate",
+    "Frappe":"Frappe",
+    "Lemonade":"Lemonade",
+    "Milkshake":"Milkshake",
+    "Soyuq Şokolad":"Cold Chocolate",
+    "Fresh Bar":"Fresh Bar",
+    "Çay":"Tea",
+    "Soyuq Klassik":"Cold Classics",
+    "Soyuq Özəl İçki":"Cold Special Drinks",
+    "Extras":"Extras"
+  },
+  ru:{
+    "Hamısı":"Все",
+    "Sendviçlər":"Сэндвичи",
+    "Salat & Bowl":"Салаты и боулы",
+    "Kruassan":"Круассаны",
+    "Dessertlər":"Десерты",
+    "Qlutensiz Dessertlər":"Десерты без сахара и глютена",
+    "Klassik Qəhvə":"Классический кофе",
+    "Özəl Dəmləmə":"Специальное заваривание",
+    "Xüsusi İçkilər":"Авторские напитки",
+    "Şokolad":"Шоколад",
+    "Frappe":"Фраппе",
+    "Lemonade":"Лимонад",
+    "Milkshake":"Милкшейк",
+    "Soyuq Şokolad":"Холодный шоколад",
+    "Fresh Bar":"Фреш бар",
+    "Çay":"Чай",
+    "Soyuq Klassik":"Холодная классика",
+    "Soyuq Özəl İçki":"Холодные авторские напитки",
+    "Extras":"Дополнительно"
+  }
+};
+
+let currentLang = localStorage.getItem("nopaLang") || "az";
+let currentCategory = "Hamısı";
+
 const menuItems = [
   {cat:"Sendviçlər", name:"Pendirli Kruassan", price:"7 ₼", img:"pendirli-kruassan.jpg"},
   {cat:"Sendviçlər", name:"Qızılbalıqlı Kruassan", price:"9.5 ₼", img:"qizilbaliqli-kruassan.jpg"},
@@ -907,14 +1186,43 @@ const menuItems = [
 const tabs = document.getElementById("tabs");
 const grid = document.getElementById("menuGrid");
 
-const categories = ["Hamısı", ...new Set(menuItems.map(item => item.cat))];
+function setLang(lang){
+  currentLang = lang;
+  localStorage.setItem("nopaLang", lang);
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang][key]){
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    if(btn.textContent.toLowerCase() === lang){
+      btn.classList.add("active");
+    }
+  });
+
+  makeTabs();
+  renderMenu(currentCategory);
+}
+
+function translateCategory(cat){
+  return categoryTranslations[currentLang][cat] || cat;
+}
 
 function makeTabs(){
-  categories.forEach((cat, index) => {
+  tabs.innerHTML = "";
+  const categories = ["Hamısı", ...new Set(menuItems.map(item => item.cat))];
+
+  categories.forEach((cat) => {
     const button = document.createElement("button");
-    button.className = "tab" + (index === 0 ? " active" : "");
-    button.textContent = cat;
+    button.className = "tab" + (cat === currentCategory ? " active" : "");
+    button.textContent = translateCategory(cat);
     button.onclick = () => {
+      currentCategory = cat;
       document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
       button.classList.add("active");
       renderMenu(cat);
@@ -933,10 +1241,10 @@ function renderMenu(category){
 
     card.innerHTML = `
       <div class="menu-card-img">
-        <img src="${item.img}" alt="${item.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=placeholder>${item.name}<br><span style=&quot;color:#c9a46c;font-size:13px&quot;>${item.cat}</span></div>';">
+        <img src="${item.img}" alt="${item.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=placeholder>${item.name}<br><span style=&quot;color:#c9a46c;font-size:13px&quot;>${translateCategory(item.cat)}</span></div>';">
       </div>
       <div class="menu-card-body">
-        <div class="cat-label">${item.cat}</div>
+        <div class="cat-label">${translateCategory(item.cat)}</div>
         <div class="menu-card-top">
           <h3>${item.name}</h3>
           <div class="price">${item.price}</div>
@@ -948,8 +1256,7 @@ function renderMenu(category){
   });
 }
 
-makeTabs();
-renderMenu("Hamısı");
+setLang(currentLang);
 </script>
 
 </body>
