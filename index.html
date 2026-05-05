@@ -1,334 +1,869 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>NOPA Coffee & Eatery</title>
+<meta name="description" content="NOPA Coffee & Eatery - Baku cafe, coffee, desserts, bowls, sandwiches and QR menu style modern restaurant website.">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+:root{
+  --bg:#f7f3ee;
+  --dark:#151515;
+  --text:#1d1d1d;
+  --muted:#6b6b6b;
+  --brand:#9b1f32;
+  --brand-dark:#761625;
+  --card:#ffffff;
+  --line:#eadfd5;
+  --gold:#c9a46c;
+  --radius:22px;
+  --shadow:0 18px 45px rgba(0,0,0,.10);
+  --max:1220px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
-font-family:Poppins;
-margin:0;
-background:#fafafa;
+  font-family:Inter, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+.container{
+  width:min(100% - 32px, var(--max));
+  margin:auto;
 }
 
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:white;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-position:sticky;
-top:0;
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(247,243,238,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.nav{
+  height:84px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.logo-wrap{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-wrap img{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  background:white;
+  border-radius:16px;
+  padding:6px;
+  box-shadow:var(--shadow);
+}
+
+.logo-text strong{
+  display:block;
+  font-size:18px;
+  font-weight:900;
+  letter-spacing:.03em;
+}
+
+.logo-text span{
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:600;
+}
+
+nav{
+  display:flex;
+  gap:22px;
+  align-items:center;
 }
 
 nav a{
-margin-left:25px;
-text-decoration:none;
-color:#333;
-font-weight:500;
+  font-size:15px;
+  font-weight:700;
+  color:#333;
+}
+
+nav a:hover{
+  color:var(--brand);
+}
+
+.header-btn{
+  background:var(--brand);
+  color:white;
+  padding:12px 18px;
+  border-radius:999px;
 }
 
 .hero{
-height:70vh;
-background:url("food6.png") center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:50px;
-font-weight:600;
-text-shadow:0 5px 20px rgba(0,0,0,0.5);
+  min-height:88vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  color:white;
+  overflow:hidden;
 }
 
-.section{
-padding:80px 10%;
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.80), rgba(0,0,0,.48), rgba(0,0,0,.25)),
+    url("hero.jpg") center/cover no-repeat;
 }
 
-.title{
-font-size:35px;
-margin-bottom:30px;
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:90px 0;
+  max-width:780px;
+}
+
+.badge{
+  display:inline-flex;
+  padding:9px 14px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.10);
+  border-radius:999px;
+  font-size:13px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(44px, 7vw, 82px);
+  line-height:.95;
+  font-weight:900;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:clamp(16px, 2vw, 20px);
+  color:rgba(255,255,255,.88);
+  max-width:700px;
+  margin-bottom:28px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:0 24px;
+  border-radius:999px;
+  font-weight:800;
+  transition:.2s;
+}
+
+.btn-primary{
+  background:var(--brand);
+  color:white;
+}
+
+.btn-light{
+  background:white;
+  color:var(--brand);
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.info-strip{
+  margin-top:-48px;
+  position:relative;
+  z-index:5;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.info-card{
+  background:white;
+  border-radius:20px;
+  padding:22px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--line);
+}
+
+.info-card small{
+  display:block;
+  color:var(--brand);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:8px;
+}
+
+.info-card strong{
+  font-size:16px;
+}
+
+section{
+  padding:84px 0;
+}
+
+.section-head{
+  margin-bottom:36px;
+}
+
+.kicker{
+  color:var(--brand);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.section-head h2{
+  font-size:clamp(32px, 4.5vw, 52px);
+  line-height:1.05;
+  margin-bottom:14px;
+}
+
+.section-head p{
+  color:var(--muted);
+  max-width:760px;
+  font-size:16px;
+}
+
+.category-tabs{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:28px;
+}
+
+.tab{
+  border:1px solid var(--line);
+  background:white;
+  padding:11px 16px;
+  border-radius:999px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.tab.active{
+  background:var(--brand);
+  color:white;
+  border-color:var(--brand);
 }
 
 .menu-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
-.menu-item{
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+.menu-card{
+  background:white;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid var(--line);
+  display:flex;
+  flex-direction:column;
 }
 
-.menu-item h4{
-margin:0;
+.menu-card-img{
+  height:220px;
+  background:
+    linear-gradient(135deg, #1b1b1b, #3b3b3b);
+  position:relative;
+  overflow:hidden;
+}
+
+.menu-card-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.placeholder{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:900;
+  font-size:18px;
+  text-align:center;
+  padding:24px;
+  background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    radial-gradient(circle at top right, rgba(201,164,108,.45), transparent 35%),
+    linear-gradient(135deg, #101010, #2a2a2a);
+}
+
+.menu-card-body{
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  flex:1;
+}
+
+.menu-card-top{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:flex-start;
+}
+
+.menu-card h3{
+  font-size:18px;
+  line-height:1.25;
 }
 
 .price{
-color:#9c1c28;
-font-weight:600;
+  color:var(--brand);
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.cat-label{
+  color:var(--muted);
+  font-size:13px;
+  font-weight:700;
 }
 
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr .8fr;
+  gap:18px;
 }
 
 .gallery img{
-width:100%;
-border-radius:12px;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:24px;
+  box-shadow:var(--shadow);
+  min-height:260px;
 }
 
-.reserve{
-background:#9c1c28;
-color:white;
-text-align:center;
-padding:80px 20px;
+.cta{
+  background:linear-gradient(135deg, var(--brand), var(--brand-dark));
+  color:white;
+  border-radius:32px;
+  padding:48px 34px;
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  align-items:center;
+  box-shadow:var(--shadow);
 }
 
-.reserve a{
-background:white;
-color:#9c1c28;
-padding:14px 30px;
-text-decoration:none;
-border-radius:8px;
-font-weight:600;
+.cta h2{
+  font-size:clamp(30px, 4vw, 46px);
+  line-height:1.05;
+  margin-bottom:12px;
 }
 
-.map iframe{
-width:100%;
-height:400px;
-border:0;
-border-radius:10px;
+.cta p{
+  color:rgba(255,255,255,.85);
+  max-width:700px;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:24px;
+}
+
+.contact-card{
+  background:white;
+  border-radius:24px;
+  padding:26px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--line);
+}
+
+.contact-card div{
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.contact-card div:first-child{
+  padding-top:0;
+}
+
+.contact-card div:last-child{
+  border-bottom:0;
+  padding-bottom:0;
+}
+
+.contact-card small{
+  color:var(--brand);
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.contact-card p,
+.contact-card a{
+  display:block;
+  margin-top:6px;
+  font-weight:700;
+}
+
+iframe{
+  width:100%;
+  height:100%;
+  min-height:450px;
+  border:0;
+  border-radius:24px;
+  box-shadow:var(--shadow);
+}
+
+.floating{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:2000;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.float-btn{
+  padding:14px 18px;
+  border-radius:999px;
+  color:white;
+  font-weight:900;
+  box-shadow:0 14px 35px rgba(0,0,0,.25);
+}
+
+.whatsapp{
+  background:#25D366;
+}
+
+.wolt{
+  background:#00C2E8;
 }
 
 footer{
-background:#111;
-color:white;
-text-align:center;
-padding:30px;
+  background:#111;
+  color:white;
+  padding:34px 0;
+  margin-top:40px;
 }
 
-</style>
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+  color:rgba(255,255,255,.78);
+}
 
+@media(max-width:1050px){
+  .menu-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .info-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  nav{
+    display:none;
+  }
+}
+
+@media(max-width:650px){
+  .menu-grid,
+  .info-grid,
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    min-height:82vh;
+  }
+
+  .cta{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .floating{
+    right:12px;
+    bottom:12px;
+  }
+
+  .float-btn{
+    font-size:13px;
+    padding:12px 15px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
+  <div class="container nav">
+    <a class="logo-wrap" href="#">
+      <img src="logo.png" alt="NOPA logo">
+      <div class="logo-text">
+        <strong>NOPA</strong>
+        <span>Coffee & Eatery</span>
+      </div>
+    </a>
 
-<img src="logo.png" height="50">
-
-<nav>
-<a href="#menu">Menu</a>
-<a href="#gallery">Gallery</a>
-<a href="#reserve">Reserve</a>
-<a href="#location">Location</a>
-</nav>
-
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Location</a>
+      <a href="https://www.instagram.com/nopacoffee" target="_blank">Instagram</a>
+      <a class="header-btn" href="https://wa.me/994775007997" target="_blank">Reserve</a>
+    </nav>
+  </div>
 </header>
 
-<div class="hero">
-NOPA Coffee & Eatery
+<section class="hero">
+  <div class="container hero-content">
+    <div class="badge">Coffee • Food • Desserts</div>
+    <h1>NOPA Coffee & Eatery</h1>
+    <p>Fresh bowls, sandwiches, desserts, signature drinks and a comfortable indoor & outdoor atmosphere in Baku.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://wa.me/994775007997" target="_blank">Reserve via WhatsApp</a>
+      <a class="btn btn-light" href="#menu">View Menu</a>
+    </div>
+  </div>
+</section>
+
+<div class="container info-strip">
+  <div class="info-grid">
+    <div class="info-card">
+      <small>Address</small>
+      <strong>116 Bahrus Nuriyev street, Baku</strong>
+    </div>
+    <div class="info-card">
+      <small>Working hours</small>
+      <strong>Every day • 8AM–12AM</strong>
+    </div>
+    <div class="info-card">
+      <small>Phone</small>
+      <strong>077 500 79 97</strong>
+    </div>
+    <div class="info-card">
+      <small>Seating</small>
+      <strong>Indoor & outdoor place</strong>
+    </div>
+  </div>
 </div>
 
-<div class="section" id="menu">
+<section id="menu">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Full Menu</div>
+      <h2>Every item with its own image slot.</h2>
+      <p>Each menu card has a separate image file. If the exact photo is uploaded with the correct file name, it will appear automatically.</p>
+    </div>
 
-<h2 class="title">Sendviçlər</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Pendirli Kruassan</h4><span class="price">7 ₼</span></div>
-  <div class="menu-item"><h4>Qızılbalıqlı Kruassan</h4><span class="price">9.5 ₼</span></div>
-  <div class="menu-item"><h4>Sezar Soslu Toyuq Wrap</h4><span class="price">7.5 ₼</span></div>
-  <div class="menu-item"><h4>Pesto Soslu Toyuq Wrap</h4><span class="price">7.5 ₼</span></div>
-  <div class="menu-item"><h4>Sezar Toyuq Çiabatta Çörəyində</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Pesto Toyuq Çiabatta Çörəyində</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Beef Cheddar Çiabatta Çörəyində</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Hindi Fümə Cheddar Tiger Çörəyində</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Kapya Bibər Vetçina Tiger Çörəyində</h4><span class="price">8 ₼</span></div>
-</div>
+    <div class="category-tabs" id="tabs"></div>
 
-<h2 class="title">Salat & Bowl</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Sushi Salmon Bowl</h4><span class="price">11 ₼</span></div>
-  <div class="menu-item"><h4>Toyuqlu Sezar Salat</h4><span class="price">9 ₼</span></div>
-  <div class="menu-item"><h4>Krevetli Sezar Salat</h4><span class="price">12 ₼</span></div>
-  <div class="menu-item"><h4>Sweet Chilli Beef Salad</h4><span class="price">9.5 ₼</span></div>
-</div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</section>
 
-<h2 class="title">Kruassan</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Lotus Kruassan</h4><span class="price">5.5 ₼</span></div>
-  <div class="menu-item"><h4>Fıstıqlı Kruassan</h4><span class="price">5.5 ₼</span></div>
-  <div class="menu-item"><h4>Şokoladlı Kruassan</h4><span class="price">5.5 ₼</span></div>
-</div>
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Gallery</div>
+      <h2>NOPA atmosphere and real visuals.</h2>
+      <p>Use only real NOPA images here. This prevents wrong product-photo matching.</p>
+    </div>
 
-<h2 class="title">Dessertlər</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Chocolatin</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Bounty Cake</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>San Sebastian</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Şokolad Berliner</h4><span class="price">4.5 ₼</span></div>
-  <div class="menu-item"><h4>Karamel Berliner</h4><span class="price">4.5 ₼</span></div>
-  <div class="menu-item"><h4>Oreo Stick Cheesecake</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Lavanda Dream Cake</h4><span class="price">8.5 ₼</span></div>
-</div>
+    <div class="gallery">
+      <img src="hero.jpg" alt="NOPA">
+      <img src="gallery1.jpg" alt="NOPA">
+      <img src="gallery2.jpg" alt="NOPA">
+    </div>
+  </div>
+</section>
 
-<h2 class="title">Şəkər & Qlutensiz Dessertlər</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Napoleon</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Meyvəli Napoleon</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Tiramisu</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Ballı Tort</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Diet San Sebastian</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Pistachio San Sebastian</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Lotus Cheesecake</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Karamel Cheesecake</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Malina Cheesecake</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Pistachio Krep</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Giləmeyvə Krep</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Çiyələk Krep</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Şokoladlı Krep</h4><span class="price">8.5 ₼</span></div>
-</div>
+<section>
+  <div class="container">
+    <div class="cta">
+      <div>
+        <h2>Reserve your table directly.</h2>
+        <p>Customers can contact NOPA through WhatsApp and get location information from one clean page.</p>
+      </div>
+      <a class="btn btn-light" href="https://wa.me/994775007997" target="_blank">Reserve Now</a>
+    </div>
+  </div>
+</section>
 
-<h2 class="title">Klassik Qəhvə</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Double Espresso</h4><span class="price">4 ₼</span></div>
-  <div class="menu-item"><h4>Americano</h4><span class="price">5 ₼</span></div>
-  <div class="menu-item"><h4>Cortado</h4><span class="price">5.5 ₼</span></div>
-  <div class="menu-item"><h4>Cappuccino</h4><span class="price">6.5 ₼</span></div>
-  <div class="menu-item"><h4>Latte</h4><span class="price">6.5 ₼</span></div>
-  <div class="menu-item"><h4>Flat White</h4><span class="price">6 ₼</span></div>
-</div>
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Location</div>
+      <h2>Visit NOPA Coffee & Eatery.</h2>
+      <p>Address, phone, WhatsApp and map are all placed clearly.</p>
+    </div>
 
-<h2 class="title">Frappe</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Sweet Cookie</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>White Strawberry</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Special Nut</h4><span class="price">8.5 ₼</span></div>
-</div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div>
+          <small>Address</small>
+          <p>116 Bahrus Nuriyev street, Baku, Azerbaijan</p>
+        </div>
+        <div>
+          <small>Phone</small>
+          <a href="tel:+994775007997">077 500 79 97</a>
+        </div>
+        <div>
+          <small>WhatsApp</small>
+          <a href="https://wa.me/994775007997" target="_blank">wa.me/994775007997</a>
+        </div>
+        <div>
+          <small>Instagram</small>
+          <a href="https://www.instagram.com/nopacoffee" target="_blank">@nopacoffee</a>
+        </div>
+        <div>
+          <small>Hours</small>
+          <p>Every day • 8AM–12AM</p>
+        </div>
+      </div>
 
-<h2 class="title">Lemonade</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Italian Soda</h4><span class="price">6.5 ₼</span></div>
-  <div class="menu-item"><h4>Iced Tea</h4><span class="price">7.5 ₼</span></div>
-  <div class="menu-item"><h4>Hibiscus Strawberry</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Cool Mint</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Tropical Refresher</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>PineStrawberry Chia</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Passion Fruit Chia</h4><span class="price">8.5 ₼</span></div>
-</div>
+      <iframe src="https://maps.google.com/maps?q=116%20Bahrus%20Nuriyev%20Street%20Baku&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>
+</section>
 
-<h2 class="title">Milkshake</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Chocolate Cookies</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Strawberry Banana</h4><span class="price">8.5 ₼</span></div>
-  <div class="menu-item"><h4>Golden Caramel</h4><span class="price">8.5 ₼</span></div>
-</div>
-
-<h2 class="title">Soyuq Şokolad</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Mocha</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>White Mocha</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Cold Chocolate</h4><span class="price">8 ₼</span></div>
-</div>
-
-<h2 class="title">Fresh Bar</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Orange</h4><span class="price">7.5 ₼</span></div>
-  <div class="menu-item"><h4>Citrus Mix</h4><span class="price">7.5 ₼</span></div>
-  <div class="menu-item"><h4>Citrus Black</h4><span class="price">9.5 ₼</span></div>
-</div>
-
-<h2 class="title">Çay</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Tea</h4><span class="price">5 ₼</span></div>
-  <div class="menu-item"><h4>Chai Tea Latte</h4><span class="price">7.5 ₼</span></div>
-  <div class="menu-item"><h4>Matcha Latte</h4><span class="price">7.5 ₼</span></div>
-</div>
-
-<h2 class="title">Soyuq Klassik</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Espresso On Ice</h4><span class="price">4 ₼</span></div>
-  <div class="menu-item"><h4>Americano</h4><span class="price">6 ₼</span></div>
-  <div class="menu-item"><h4>Cold Brew</h4><span class="price">6.5 ₼</span></div>
-  <div class="menu-item"><h4>Cappuccino</h4><span class="price">7 ₼</span></div>
-  <div class="menu-item"><h4>Latte</h4><span class="price">7 ₼</span></div>
-</div>
-
-<h2 class="title">Soyuq Xüsusi İçkilər</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Affogato</h4><span class="price">6.5 ₼</span></div>
-  <div class="menu-item"><h4>Spanish Latte</h4><span class="price">7.5 ₼</span></div>
-  <div class="menu-item"><h4>Black Tonic</h4><span class="price">7.5 ₼</span></div>
-  <div class="menu-item"><h4>Salted Caramel Latte</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Raf</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Chai Tea Latte</h4><span class="price">8 ₼</span></div>
-  <div class="menu-item"><h4>Iced Matcha</h4><span class="price">8.5 ₼</span></div>
-</div>
-
-<h2 class="title">Extras</h2>
-<div class="menu-grid">
-  <div class="menu-item"><h4>Syrup</h4><span class="price">2 ₼</span></div>
-  <div class="menu-item"><h4>Extra Shot</h4><span class="price">2.5 ₼</span></div>
-  <div class="menu-item"><h4>Alternative Milk</h4><span class="price">3 ₼</span></div>
-  <div class="menu-item"><h4>Whipped Cream</h4><span class="price">2 ₼</span></div>
-</div>
-
-</div>
-
-</div>
-
-<div class="section" id="gallery">
-
-<h2 class="title">Gallery</h2>
-
-<div class="gallery">
-
-<img src="food1.png">
-<img src="food2.png">
-<img src="food3.png">
-<img src="food4.png">
-<img src="food5.png">
-
-</div>
-
-</div>
-
-<div class="reserve" id="reserve">
-
-<h2>Reserve your table</h2>
-
-<p>Contact via WhatsApp</p>
-
-<a href="https://wa.me/994775007997">Reserve</a>
-
-</div>
-
-<div class="section map" id="location">
-
-<h2 class="title">Location</h2>
-
-<iframe src="https://maps.google.com/maps?q=116%20Bahrus%20Nuriyev%20Street%20Baku&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-
+<div class="floating">
+  <a class="float-btn whatsapp" href="https://wa.me/994775007997" target="_blank">WhatsApp</a>
+  <a class="float-btn wolt" href="https://wolt.com/en/aze/baku/restaurant/nopa" target="_blank">Order on Wolt</a>
 </div>
 
 <footer>
-
-NOPA Coffee & Eatery  
-116 Bahrus Nuriyev street  
-077 500 79 97
-
+  <div class="container footer-inner">
+    <div>NOPA Coffee & Eatery</div>
+    <div>Demo website by DinafSites</div>
+  </div>
 </footer>
+
+<script>
+const menuItems = [
+  {cat:"Sendviçlər", name:"Pendirli Kruassan", price:"7 ₼", img:"pendirli-kruassan.jpg"},
+  {cat:"Sendviçlər", name:"Qızılbalıqlı Kruassan", price:"9.5 ₼", img:"qizilbaliqli-kruassan.jpg"},
+  {cat:"Sendviçlər", name:"Sezar Soslu Toyuq Wrap", price:"7.5 ₼", img:"sezar-toyuq-wrap.jpg"},
+  {cat:"Sendviçlər", name:"Pesto Soslu Toyuq Wrap", price:"7.5 ₼", img:"pesto-toyuq-wrap.jpg"},
+  {cat:"Sendviçlər", name:"Sezar Toyuq Çiabatta Çörəyində", price:"8 ₼", img:"sezar-toyuq-ciabatta.jpg"},
+  {cat:"Sendviçlər", name:"Pesto Toyuq Çiabatta Çörəyində", price:"8 ₼", img:"pesto-toyuq-ciabatta.jpg"},
+  {cat:"Sendviçlər", name:"Beef Cheddar Çiabatta Çörəyində", price:"8.5 ₼", img:"beef-cheddar-ciabatta.jpg"},
+  {cat:"Sendviçlər", name:"Hindi Fümə Cheddar Tiger Çörəyində", price:"8 ₼", img:"hindi-fume-cheddar-tiger.jpg"},
+  {cat:"Sendviçlər", name:"Kapya Bibər Vetçina Tiger Çörəyində", price:"8 ₼", img:"kapya-biber-vetcina-tiger.jpg"},
+
+  {cat:"Salat & Bowl", name:"Sushi Salmon Bowl", price:"11 ₼", img:"sushi-salmon-bowl.jpg"},
+  {cat:"Salat & Bowl", name:"Toyuqlu Sezar Salat", price:"9 ₼", img:"toyuqlu-sezar-salat.jpg"},
+  {cat:"Salat & Bowl", name:"Krevetli Sezar Salat", price:"12 ₼", img:"krevetli-sezar-salat.jpg"},
+  {cat:"Salat & Bowl", name:"Sweet Chilli Beef Salad", price:"9.5 ₼", img:"sweet-chilli-beef-salad.jpg"},
+
+  {cat:"Kruassan", name:"Lotus Kruassan", price:"5.5 ₼", img:"lotus-kruassan.jpg"},
+  {cat:"Kruassan", name:"Fıstıqlı Kruassan", price:"5.5 ₼", img:"fistiqli-kruassan.jpg"},
+  {cat:"Kruassan", name:"Şokoladlı Kruassan", price:"5.5 ₼", img:"sokoladli-kruassan.jpg"},
+
+  {cat:"Dessertlər", name:"Chocolatin", price:"8.5 ₼", img:"chocolatin.jpg"},
+  {cat:"Dessertlər", name:"Bounty Cake", price:"8.5 ₼", img:"bounty-cake.jpg"},
+  {cat:"Dessertlər", name:"San Sebastian", price:"8 ₼", img:"san-sebastian.jpg"},
+  {cat:"Dessertlər", name:"Şokolad Berliner", price:"4.5 ₼", img:"sokolad-berliner.jpg"},
+  {cat:"Dessertlər", name:"Karamel Berliner", price:"4.5 ₼", img:"karamel-berliner.jpg"},
+  {cat:"Dessertlər", name:"Oreo Stick Cheesecake", price:"8 ₼", img:"oreo-stick-cheesecake.jpg"},
+  {cat:"Dessertlər", name:"Lavanda Dream Cake", price:"8.5 ₼", img:"lavanda-dream-cake.jpg"},
+
+  {cat:"Qlutensiz Dessertlər", name:"Napoleon", price:"8 ₼", img:"napoleon.jpg"},
+  {cat:"Qlutensiz Dessertlər", name:"Meyvəli Napoleon", price:"8.5 ₼", img:"meyveli-napoleon.jpg"},
+  {cat:"Qlutensiz Dessertlər", name:"Tiramisu", price:"8 ₼", img:"tiramisu.jpg"},
+  {cat:"Qlutensiz Dessertlər", name:"Ballı Tort", price:"8 ₼", img:"balli-tort.jpg"},
+  {cat:"Qlutensiz Dessertlər", name:"Diet San Sebastian", price:"8.5 ₼", img:"diet-san-sebastian.jpg"},
+  {cat:"Qlutensiz Dessertlər", name:"Pistachio San Sebastian", price:"8.5 ₼", img:"pistachio-san-sebastian.jpg"},
+  {cat:"Qlutensiz Dessertlər", name:"Lotus Cheesecake", price:"8.5 ₼", img:"lotus-cheesecake.jpg"},
+  {cat:"Qlutensiz Dessertlər", name:"Karamel Cheesecake", price:"8.5 ₼", img:"karamel-cheesecake.jpg"},
+  {cat:"Qlutensiz Dessertlər", name:"Malina Cheesecake", price:"8.5 ₼", img:"malina-cheesecake.jpg"},
+  {cat:"Qlutensiz Dessertlər", name:"Pistachio Krep", price:"8.5 ₼", img:"pistachio-krep.jpg"},
+  {cat:"Qlutensiz Dessertlər", name:"Giləmeyvə Krep", price:"8.5 ₼", img:"gilemeyve-krep.jpg"},
+  {cat:"Qlutensiz Dessertlər", name:"Çiyələk Krep", price:"8.5 ₼", img:"ciyelek-krep.jpg"},
+  {cat:"Qlutensiz Dessertlər", name:"Şokoladlı Krep", price:"8.5 ₼", img:"sokoladli-krep.jpg"},
+
+  {cat:"Klassik Qəhvə", name:"Double Espresso", price:"4 ₼", img:"double-espresso.jpg"},
+  {cat:"Klassik Qəhvə", name:"Americano", price:"5–6 ₼", img:"americano.jpg"},
+  {cat:"Klassik Qəhvə", name:"Cortado", price:"5.5 ₼", img:"cortado.jpg"},
+  {cat:"Klassik Qəhvə", name:"Cappuccino", price:"5.5–6.5 ₼", img:"cappuccino.jpg"},
+  {cat:"Klassik Qəhvə", name:"Latte", price:"5.5–6.5 ₼", img:"latte.jpg"},
+  {cat:"Klassik Qəhvə", name:"Flat White", price:"6 ₼", img:"flat-white.jpg"},
+
+  {cat:"Özəl Dəmləmə", name:"Turkish Coffee", price:"5 ₼", img:"turkish-coffee.jpg"},
+  {cat:"Özəl Dəmləmə", name:"Xbloom Coffee", price:"7 ₼", img:"xbloom-coffee.jpg"},
+  {cat:"Özəl Dəmləmə", name:"Aeropress", price:"7 ₼", img:"aeropress.jpg"},
+  {cat:"Özəl Dəmləmə", name:"Clever Dripper", price:"7 ₼", img:"clever-dripper.jpg"},
+  {cat:"Özəl Dəmləmə", name:"V60", price:"8 ₼", img:"v60.jpg"},
+  {cat:"Özəl Dəmləmə", name:"Chemex for 2", price:"12 ₼", img:"chemex-for-2.jpg"},
+
+  {cat:"Xüsusi İçkilər", name:"Raf", price:"7.5 ₼", img:"raf.jpg"},
+  {cat:"Xüsusi İçkilər", name:"Irish Latte", price:"7.5 ₼", img:"irish-latte.jpg"},
+  {cat:"Xüsusi İçkilər", name:"Spanish Latte", price:"7.5 ₼", img:"spanish-latte.jpg"},
+  {cat:"Xüsusi İçkilər", name:"Macadamia Nuts Latte", price:"7.5 ₼", img:"macadamia-nuts-latte.jpg"},
+  {cat:"Xüsusi İçkilər", name:"Salted Caramel Latte", price:"7.5 ₼", img:"salted-caramel-latte.jpg"},
+
+  {cat:"Şokolad", name:"Hot Chocolate", price:"6.5–7.5 ₼", img:"hot-chocolate.jpg"},
+  {cat:"Şokolad", name:"White Hot Chocolate", price:"6.5–7.5 ₼", img:"white-hot-chocolate.jpg"},
+  {cat:"Şokolad", name:"White Mocha", price:"6.5–7.5 ₼", img:"white-mocha.jpg"},
+  {cat:"Şokolad", name:"Caffe Mocha", price:"6.5–7.5 ₼", img:"caffe-mocha.jpg"},
+
+  {cat:"Frappe", name:"Sweet Cookie", price:"8.5 ₼", img:"sweet-cookie-frappe.jpg"},
+  {cat:"Frappe", name:"White Strawberry", price:"8.5 ₼", img:"white-strawberry-frappe.jpg"},
+  {cat:"Frappe", name:"Special Nut", price:"8.5 ₼", img:"special-nut-frappe.jpg"},
+
+  {cat:"Lemonade", name:"Italian Soda", price:"6.5 ₼", img:"italian-soda.jpg"},
+  {cat:"Lemonade", name:"Iced Tea", price:"7.5 ₼", img:"iced-tea.jpg"},
+  {cat:"Lemonade", name:"Hibiscus Strawberry", price:"8 ₼", img:"hibiscus-strawberry.jpg"},
+  {cat:"Lemonade", name:"Cool Mint", price:"8 ₼", img:"cool-mint.jpg"},
+  {cat:"Lemonade", name:"Tropical Refresher", price:"8 ₼", img:"tropical-refresher.jpg"},
+  {cat:"Lemonade", name:"PineStrawberry Chia", price:"8.5 ₼", img:"pine-strawberry-chia.jpg"},
+  {cat:"Lemonade", name:"Passion Fruit Chia", price:"8.5 ₼", img:"passion-fruit-chia.jpg"},
+
+  {cat:"Milkshake", name:"Chocolate Cookies", price:"8.5 ₼", img:"chocolate-cookies-milkshake.jpg"},
+  {cat:"Milkshake", name:"Strawberry Banana", price:"8.5 ₼", img:"strawberry-banana-milkshake.jpg"},
+  {cat:"Milkshake", name:"Golden Caramel", price:"8.5 ₼", img:"golden-caramel-milkshake.jpg"},
+
+  {cat:"Soyuq Şokolad", name:"Mocha", price:"8 ₼", img:"cold-mocha.jpg"},
+  {cat:"Soyuq Şokolad", name:"White Mocha", price:"8 ₼", img:"cold-white-mocha.jpg"},
+  {cat:"Soyuq Şokolad", name:"Cold Chocolate", price:"8 ₼", img:"cold-chocolate.jpg"},
+
+  {cat:"Fresh Bar", name:"Orange", price:"7.5 ₼", img:"orange-fresh.jpg"},
+  {cat:"Fresh Bar", name:"Citrus Mix", price:"7.5 ₼", img:"citrus-mix.jpg"},
+  {cat:"Fresh Bar", name:"Citrus Black", price:"9.5 ₼", img:"citrus-black.jpg"},
+
+  {cat:"Çay", name:"Tea", price:"5 ₼", img:"tea.jpg"},
+  {cat:"Çay", name:"Chai Tea Latte", price:"6.5–7.5 ₼", img:"chai-tea-latte.jpg"},
+  {cat:"Çay", name:"Matcha Latte", price:"6.5–7.5 ₼", img:"matcha-latte.jpg"},
+
+  {cat:"Soyuq Klassik", name:"Espresso On Ice", price:"4 ₼", img:"espresso-on-ice.jpg"},
+  {cat:"Soyuq Klassik", name:"Americano", price:"6 ₼", img:"ice-americano.jpg"},
+  {cat:"Soyuq Klassik", name:"Cold Brew", price:"6.5 ₼", img:"cold-brew.jpg"},
+  {cat:"Soyuq Klassik", name:"Cappuccino", price:"7 ₼", img:"ice-cappuccino.jpg"},
+  {cat:"Soyuq Klassik", name:"Latte", price:"7 ₼", img:"ice-latte.jpg"},
+
+  {cat:"Soyuq Özəl İçki", name:"Affogato", price:"6.5 ₼", img:"affogato.jpg"},
+  {cat:"Soyuq Özəl İçki", name:"Spanish Latte", price:"7.5 ₼", img:"ice-spanish-latte.jpg"},
+  {cat:"Soyuq Özəl İçki", name:"Black Tonic", price:"7.5 ₼", img:"black-tonic.jpg"},
+  {cat:"Soyuq Özəl İçki", name:"Salted Caramel Latte", price:"8 ₼", img:"ice-salted-caramel-latte.jpg"},
+  {cat:"Soyuq Özəl İçki", name:"Raf", price:"8 ₼", img:"ice-raf.jpg"},
+  {cat:"Soyuq Özəl İçki", name:"Chai Tea Latte", price:"8 ₼", img:"ice-chai-tea-latte.jpg"},
+  {cat:"Soyuq Özəl İçki", name:"Iced Matcha", price:"8.5 ₼", img:"iced-matcha.jpg"},
+
+  {cat:"Extras", name:"Syrup", price:"2 ₼", img:"syrup.jpg"},
+  {cat:"Extras", name:"Extra Shot", price:"2.5 ₼", img:"extra-shot.jpg"},
+  {cat:"Extras", name:"Alternative Milk", price:"3 ₼", img:"alternative-milk.jpg"},
+  {cat:"Extras", name:"Whipped Cream", price:"2 ₼", img:"whipped-cream.jpg"}
+];
+
+const tabs = document.getElementById("tabs");
+const grid = document.getElementById("menuGrid");
+
+const categories = ["Hamısı", ...new Set(menuItems.map(item => item.cat))];
+
+function makeTabs(){
+  categories.forEach((cat, index) => {
+    const button = document.createElement("button");
+    button.className = "tab" + (index === 0 ? " active" : "");
+    button.textContent = cat;
+    button.onclick = () => {
+      document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+      button.classList.add("active");
+      renderMenu(cat);
+    };
+    tabs.appendChild(button);
+  });
+}
+
+function renderMenu(category){
+  grid.innerHTML = "";
+  const filtered = category === "Hamısı" ? menuItems : menuItems.filter(item => item.cat === category);
+
+  filtered.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "menu-card";
+
+    card.innerHTML = `
+      <div class="menu-card-img">
+        <img src="${item.img}" alt="${item.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=placeholder>${item.name}<br><span style=&quot;color:#c9a46c;font-size:13px&quot;>${item.cat}</span></div>';">
+      </div>
+      <div class="menu-card-body">
+        <div class="cat-label">${item.cat}</div>
+        <div class="menu-card-top">
+          <h3>${item.name}</h3>
+          <div class="price">${item.price}</div>
+        </div>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+makeTabs();
+renderMenu("Hamısı");
+</script>
 
 </body>
 </html>
