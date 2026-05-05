@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Full expanded version: same features, more readable lines. -->
 <html lang="az">
 <head>
 <meta charset="UTF-8">
@@ -393,6 +392,18 @@ white-space:nowrap
 color:var(--muted);
 font-size:13px;
 font-weight:700
+}
+
+.menu-desc{
+
+  color:var(--muted);
+
+  font-size:14px;
+
+  line-height:1.45;
+
+  margin-top:2px;
+
 }
 
 .gallery{
@@ -790,7 +801,9 @@ font-size:12px
 </header>
 <section class="hero">
 <div class="container hero-content">
-<div class="badge" data-i18n="heroBadge">Qəhvə • Yemək • Dessertlər</div><h1>NOPA Coffee & Eatery</h1><p data-i18n="heroText">Bakıda fresh bowls, sendviçlər, dessertlər, xüsusi içkilər və rahat indoor & outdoor atmosfer.</p>
+<div class="badge" data-i18n="heroBadge">Qəhvə • Yemək • Dessertlər</div>
+<h1>NOPA Coffee & Eatery</h1>
+<p data-i18n="heroText">Bakıda fresh bowls, sendviçlər, dessertlər, xüsusi içkilər və rahat indoor & outdoor atmosfer.</p>
 <div class="hero-actions">
 <a class="btn btn-primary" href="https://wa.me/994775007997" target="_blank" data-i18n="heroReserve">WhatsApp ilə rezervasiya</a>
 <a class="btn btn-light" href="#menu" data-i18n="heroMenu">Menyunu gör</a>
@@ -810,7 +823,9 @@ font-size:12px
 <section id="menu">
 <div class="container">
 <div class="section-head">
-<div class="kicker" data-i18n="menuKicker">Tam Menyu</div><h2 data-i18n="menuTitle">Hər məhsul üçün ayrıca şəkil yeri.</h2><p data-i18n="menuText">Hər menyu kartının ayrıca şəkil faylı var. Düzgün fayl adı ilə şəkil yüklənəndə avtomatik görünəcək.</p>
+<div class="kicker" data-i18n="menuKicker">Tam Menyu</div>
+<h2 data-i18n="menuTitle">Hər məhsul üçün ayrıca şəkil yeri.</h2>
+<p data-i18n="menuText">Hər menyu kartının ayrıca şəkil faylı var. Düzgün fayl adı ilə şəkil yüklənəndə avtomatik görünəcək.</p>
 </div>
 <div class="category-tabs" id="tabs">
 </div>
@@ -820,7 +835,9 @@ font-size:12px
 <section id="gallery">
 <div class="container">
 <div class="section-head">
-<div class="kicker" data-i18n="galleryKicker">Galereya</div><h2 data-i18n="galleryTitle">NOPA atmosferi və real görüntülər.</h2><p data-i18n="galleryText">Burada yalnız real NOPA şəkilləri istifadə olunur ki, məhsul-şəkil qarışıqlığı olmasın.</p>
+<div class="kicker" data-i18n="galleryKicker">Galereya</div>
+<h2 data-i18n="galleryTitle">NOPA atmosferi və real görüntülər.</h2>
+<p data-i18n="galleryText">Burada yalnız real NOPA şəkilləri istifadə olunur ki, məhsul-şəkil qarışıqlığı olmasın.</p>
 </div>
 <div class="gallery"><img src="hero.jpg" alt="NOPA hero"><img src="gallery1.jpg" alt="NOPA drinks"><img src="gallery2.jpg" alt="NOPA food">
 </div></div>
@@ -829,21 +846,31 @@ font-size:12px
 <div class="container">
 <div class="qr-section">
 <div class="section-head">
-<div class="kicker">QR Menu</div><h2 data-i18n="qrTitle">Skan et, aç və daha sürətli sifariş et.</h2><p data-i18n="qrText">Müştərilər QR kodları skan edərək rəqəmsal menyunu aça, WhatsApp ilə rezervasiya edə və Wolt-dan sifariş verə bilər.</p>
+<div class="kicker">QR Menu</div>
+<h2 data-i18n="qrTitle">Skan et, aç və daha sürətli sifariş et.</h2>
+<p data-i18n="qrText">Müştərilər QR kodları skan edərək rəqəmsal menyunu aça, WhatsApp ilə rezervasiya edə və Wolt-dan sifariş verə bilər.</p>
 </div>
 <div class="qr-grid">
-<div class="qr-card"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://dinafsites.github.io/nopa-coffee/" alt="QR Menu"><h3>QR Menu</h3><p data-i18n="qrMenuText">Rəqəmsal menyunu açmaq üçün skan edin.</p>
+<div class="qr-card"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://dinafsites.github.io/nopa-coffee/" alt="QR Menu">
+<h3>QR Menu</h3>
+<p data-i18n="qrMenuText">Rəqəmsal menyunu açmaq üçün skan edin.</p>
 </div>
-<div class="qr-card"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://wa.me/994775007997" alt="WhatsApp QR"><h3>WhatsApp</h3><p data-i18n="qrWhatsappText">Rezervasiya və əlaqə üçün skan edin.</p>
+<div class="qr-card"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://wa.me/994775007997" alt="WhatsApp QR">
+<h3>WhatsApp</h3>
+<p data-i18n="qrWhatsappText">Rezervasiya və əlaqə üçün skan edin.</p>
 </div>
-<div class="qr-card"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://wolt.com/en/aze/baku/restaurant/nopa" alt="Wolt QR"><h3>Wolt</h3><p data-i18n="qrWoltText">Online sifariş səhifəsini açmaq üçün skan edin.</p>
+<div class="qr-card"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://wolt.com/en/aze/baku/restaurant/nopa" alt="Wolt QR">
+<h3>Wolt</h3>
+<p data-i18n="qrWoltText">Online sifariş səhifəsini açmaq üçün skan edin.</p>
 </div></div>
 </div></div>
 </section>
 <section>
 <div class="container">
 <div class="cta">
-<div><h2 data-i18n="ctaTitle">Masanızı birbaşa rezerv edin.</h2><p data-i18n="ctaText">Müştərilər WhatsApp ilə NOPA ilə əlaqə saxlaya və məkan məlumatını bir səhifədən rahat tapa bilər.</p>
+<div>
+<h2 data-i18n="ctaTitle">Masanızı birbaşa rezerv edin.</h2>
+<p data-i18n="ctaText">Müştərilər WhatsApp ilə NOPA ilə əlaqə saxlaya və məkan məlumatını bir səhifədən rahat tapa bilər.</p>
 </div>
 <a class="btn btn-light" href="https://wa.me/994775007997" target="_blank" data-i18n="ctaButton">Rezervasiya et</a>
 </div></div>
@@ -851,11 +878,14 @@ font-size:12px
 <section id="contact">
 <div class="container">
 <div class="section-head">
-<div class="kicker" data-i18n="locationKicker">Məkan</div><h2 data-i18n="locationTitle">NOPA Coffee & Eatery-ni ziyarət edin.</h2><p data-i18n="locationText">Ünvan, telefon, WhatsApp və xəritə hamısı aydın şəkildə yerləşdirilib.</p>
+<div class="kicker" data-i18n="locationKicker">Məkan</div>
+<h2 data-i18n="locationTitle">NOPA Coffee & Eatery-ni ziyarət edin.</h2>
+<p data-i18n="locationText">Ünvan, telefon, WhatsApp və xəritə hamısı aydın şəkildə yerləşdirilib.</p>
 </div>
 <div class="contact-grid">
 <div class="contact-card">
-<div><small data-i18n="contactAddress">Ünvan</small><p>116 Bahrus Nuriyev street, Baku, Azerbaijan</p>
+<div><small data-i18n="contactAddress">Ünvan</small>
+<p>116 Bahrus Nuriyev street, Baku, Azerbaijan</p>
 </div>
 <div><small data-i18n="contactPhone">Telefon</small>
 <a href="tel:+994775007997">077 500 79 97</a>
@@ -866,7 +896,8 @@ font-size:12px
 <div><small>Instagram</small>
 <a href="https://www.instagram.com/nopacoffee" target="_blank">@nopacoffee</a>
 </div>
-<div><small data-i18n="contactHours">İş saatları</small><p data-i18n="contactHoursText">Hər gün • 08:00–00:00</p>
+<div><small data-i18n="contactHours">İş saatları</small>
+<p data-i18n="contactHoursText">Hər gün • 08:00–00:00</p>
 </div></div><iframe src="https://maps.google.com/maps?q=116%20Bahrus%20Nuriyev%20Street%20Baku&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
 </div></div>
 </section>
@@ -900,16 +931,70 @@ navMenu:"Меню",navGallery:"Галерея",navQr:"QR Меню",navLocation:"
 
 const categoryTranslations = {
 
-az:{
-"Hamısı":"Hamısı","Sendviçlər":"Sendviçlər","Salat & Bowl":"Salat & Bowl","Kruassan":"Kruassan","Dessertlər":"Dessertlər","Qlutensiz Dessertlər":"Qlutensiz Dessertlər","Klassik Qəhvə":"Klassik Qəhvə","Özəl Dəmləmə":"Özəl Dəmləmə","Xüsusi İçkilər":"Xüsusi İçkilər","Şokolad":"Şokolad","Frappe":"Frappe","Lemonade":"Lemonade","Milkshake":"Milkshake","Soyuq Şokolad":"Soyuq Şokolad","Fresh Bar":"Fresh Bar","Çay":"Çay","Soyuq Klassik":"Soyuq Klassik","Soyuq Özəl İçki":"Soyuq Özəl İçki","Extras":"Extras"
+  "az": {
+
+    "Hamısı": "Hamısı",
+    "Populyar": "Populyar",
+    "Soyuq Xüsusi İçkilər": "Soyuq Xüsusi İçkilər",
+    "Limonadlar": "Limonadlar",
+    "İsti Klassiklər": "İsti Klassiklər",
+    "Özəl Dəmləmə": "Özəl Dəmləmə",
+    "Xüsusi İçkilər": "Xüsusi İçkilər",
+    "Non-Coffee": "Non-Coffee",
+    "Desertlər": "Desertlər",
+    "Dietik Desertlər": "Dietik Desertlər",
+    "Sendviç və Rollar": "Sendviç və Rollar",
+    "Fresh Bar": "Fresh Bar",
+    "Milkşeyklər": "Milkşeyklər",
+    "Frappe": "Frappe",
+    "Kofe Dənələri": "Kofe Dənələri",
+    "Merchandise": "Merchandise",
+    "Soft Drinks": "Soft Drinks"
+  
 }
 ,
-en:{
-"Hamısı":"All","Sendviçlər":"Sandwiches","Salat & Bowl":"Salad & Bowl","Kruassan":"Croissants","Dessertlər":"Desserts","Qlutensiz Dessertlər":"Sugar & Gluten-Free Desserts","Klassik Qəhvə":"Coffee Classics","Özəl Dəmləmə":"Special Brewing","Xüsusi İçkilər":"Special Drinks","Şokolad":"Chocolate","Frappe":"Frappe","Lemonade":"Lemonade","Milkshake":"Milkshake","Soyuq Şokolad":"Cold Chocolate","Fresh Bar":"Fresh Bar","Çay":"Tea","Soyuq Klassik":"Cold Classics","Soyuq Özəl İçki":"Cold Special Drinks","Extras":"Extras"
+  "en": {
+
+    "Hamısı": "All",
+    "Populyar": "Popular",
+    "Soyuq Xüsusi İçkilər": "Cold Special Drinks",
+    "Limonadlar": "Lemonades",
+    "İsti Klassiklər": "Hot Classics",
+    "Özəl Dəmləmə": "Special Brewing",
+    "Xüsusi İçkilər": "Special Drinks",
+    "Non-Coffee": "Non-Coffee",
+    "Desertlər": "Desserts",
+    "Dietik Desertlər": "Diet Desserts",
+    "Sendviç və Rollar": "Sandwiches & Rolls",
+    "Fresh Bar": "Fresh Bar",
+    "Milkşeyklər": "Milkshakes",
+    "Frappe": "Frappe",
+    "Kofe Dənələri": "Coffee Beans",
+    "Merchandise": "Merchandise",
+    "Soft Drinks": "Soft Drinks"
+  
 }
 ,
-ru:{
-"Hamısı":"Все","Sendviçlər":"Сэндвичи","Salat & Bowl":"Салаты и боулы","Kruassan":"Круассаны","Dessertlər":"Десерты","Qlutensiz Dessertlər":"Десерты без сахара и глютена","Klassik Qəhvə":"Классический кофе","Özəl Dəmləmə":"Специальное заваривание","Xüsusi İçkilər":"Авторские напитки","Şokolad":"Шоколад","Frappe":"Фраппе","Lemonade":"Лимонад","Milkshake":"Милкшейк","Soyuq Şokolad":"Холодный шоколад","Fresh Bar":"Фреш бар","Çay":"Чай","Soyuq Klassik":"Холодная классика","Soyuq Özəl İçki":"Холодные авторские напитки","Extras":"Дополнительно"
+  "ru": {
+
+    "Hamısı": "Все",
+    "Populyar": "Популярное",
+    "Soyuq Xüsusi İçkilər": "Холодные авторские напитки",
+    "Limonadlar": "Лимонады",
+    "İsti Klassiklər": "Горячая классика",
+    "Özəl Dəmləmə": "Специальное заваривание",
+    "Xüsusi İçkilər": "Авторские напитки",
+    "Non-Coffee": "Без кофе",
+    "Desertlər": "Десерты",
+    "Dietik Desertlər": "Диетические десерты",
+    "Sendviç və Rollar": "Сэндвичи и роллы",
+    "Fresh Bar": "Фреш бар",
+    "Milkşeyklər": "Милкшейки",
+    "Frappe": "Фраппе",
+    "Kofe Dənələri": "Кофейные зерна",
+    "Merchandise": "Мерч",
+    "Soft Drinks": "Безалкогольные напитки"
+  
 }
 
 }
@@ -922,415 +1007,381 @@ let currentCategory = "Hamısı";
 const menuItems = [
   {
 
-    "cat": "Sendviçlər",
-    "name": "Pendirli Kruassan",
-    "price": "7 ₼",
-    "img": "pendirli-kruassan.jpg"
+    "cat": "Populyar",
+    "name": "Coffee Lover's Tiramisu",
+    "desc": "Buğda unu, maskarpone pendiri, qəhvə, şəkər tozu, yumurta, kakao",
+    "price": "10,50 AZN",
+    "img": "coffee-lover-s-tiramisu.jpg"
   
 }
 ,
   {
 
-    "cat": "Sendviçlər",
-    "name": "Qızılbalıqlı Kruassan",
-    "price": "9.5 ₼",
-    "img": "qizilbaliqli-kruassan.jpg"
+    "cat": "Populyar",
+    "name": "Dietik San Sebastian",
+    "desc": "Mascarpone pendiri, krem pendir, qaymaq və stevia, üzərində malina və ya çiyələk",
+    "price": "10,50 AZN",
+    "img": "dietik-san-sebastian.jpg"
   
 }
 ,
   {
 
-    "cat": "Sendviçlər",
-    "name": "Sezar Soslu Toyuq Wrap",
-    "price": "7.5 ₼",
-    "img": "sezar-toyuq-wrap.jpg"
-  
-}
-,
-  {
-
-    "cat": "Sendviçlər",
-    "name": "Pesto Soslu Toyuq Wrap",
-    "price": "7.5 ₼",
-    "img": "pesto-toyuq-wrap.jpg"
-  
-}
-,
-  {
-
-    "cat": "Sendviçlər",
-    "name": "Sezar Toyuq Çiabatta Çörəyində",
-    "price": "8 ₼",
-    "img": "sezar-toyuq-ciabatta.jpg"
-  
-}
-,
-  {
-
-    "cat": "Sendviçlər",
-    "name": "Pesto Toyuq Çiabatta Çörəyində",
-    "price": "8 ₼",
-    "img": "pesto-toyuq-ciabatta.jpg"
-  
-}
-,
-  {
-
-    "cat": "Sendviçlər",
-    "name": "Beef Cheddar Çiabatta Çörəyində",
-    "price": "8.5 ₼",
-    "img": "beef-cheddar-ciabatta.jpg"
-  
-}
-,
-  {
-
-    "cat": "Sendviçlər",
-    "name": "Hindi Fümə Cheddar Tiger Çörəyində",
-    "price": "8 ₼",
-    "img": "hindi-fume-cheddar-tiger.jpg"
-  
-}
-,
-  {
-
-    "cat": "Sendviçlər",
-    "name": "Kapya Bibər Vetçina Tiger Çörəyində",
-    "price": "8 ₼",
-    "img": "kapya-biber-vetcina-tiger.jpg"
-  
-}
-,
-  {
-
-    "cat": "Salat & Bowl",
-    "name": "Sushi Salmon Bowl",
-    "price": "11 ₼",
-    "img": "sushi-salmon-bowl.jpg"
-  
-}
-,
-  {
-
-    "cat": "Salat & Bowl",
-    "name": "Toyuqlu Sezar Salat",
-    "price": "9 ₼",
-    "img": "toyuqlu-sezar-salat.jpg"
-  
-}
-,
-  {
-
-    "cat": "Salat & Bowl",
-    "name": "Krevetli Sezar Salat",
-    "price": "12 ₼",
-    "img": "krevetli-sezar-salat.jpg"
-  
-}
-,
-  {
-
-    "cat": "Salat & Bowl",
-    "name": "Sweet Chilli Beef Salad",
-    "price": "9.5 ₼",
-    "img": "sweet-chilli-beef-salad.jpg"
-  
-}
-,
-  {
-
-    "cat": "Kruassan",
-    "name": "Lotus Kruassan",
-    "price": "5.5 ₼",
-    "img": "lotus-kruassan.jpg"
-  
-}
-,
-  {
-
-    "cat": "Kruassan",
-    "name": "Fıstıqlı Kruassan",
-    "price": "5.5 ₼",
-    "img": "fistiqli-kruassan.jpg"
-  
-}
-,
-  {
-
-    "cat": "Kruassan",
-    "name": "Şokoladlı Kruassan",
-    "price": "5.5 ₼",
-    "img": "sokoladli-kruassan.jpg"
-  
-}
-,
-  {
-
-    "cat": "Dessertlər",
-    "name": "Chocolatin",
-    "price": "8.5 ₼",
-    "img": "chocolatin.jpg"
-  
-}
-,
-  {
-
-    "cat": "Dessertlər",
-    "name": "Bounty Cake",
-    "price": "8.5 ₼",
-    "img": "bounty-cake.jpg"
-  
-}
-,
-  {
-
-    "cat": "Dessertlər",
-    "name": "San Sebastian",
-    "price": "8 ₼",
-    "img": "san-sebastian.jpg"
-  
-}
-,
-  {
-
-    "cat": "Dessertlər",
-    "name": "Şokolad Berliner",
-    "price": "4.5 ₼",
-    "img": "sokolad-berliner.jpg"
-  
-}
-,
-  {
-
-    "cat": "Dessertlər",
-    "name": "Karamel Berliner",
-    "price": "4.5 ₼",
-    "img": "karamel-berliner.jpg"
-  
-}
-,
-  {
-
-    "cat": "Dessertlər",
-    "name": "Oreo Stick Cheesecake",
-    "price": "8 ₼",
-    "img": "oreo-stick-cheesecake.jpg"
-  
-}
-,
-  {
-
-    "cat": "Dessertlər",
-    "name": "Lavanda Dream Cake",
-    "price": "8.5 ₼",
-    "img": "lavanda-dream-cake.jpg"
-  
-}
-,
-  {
-
-    "cat": "Qlutensiz Dessertlər",
-    "name": "Napoleon",
-    "price": "8 ₼",
-    "img": "napoleon.jpg"
-  
-}
-,
-  {
-
-    "cat": "Qlutensiz Dessertlər",
-    "name": "Meyvəli Napoleon",
-    "price": "8.5 ₼",
-    "img": "meyveli-napoleon.jpg"
-  
-}
-,
-  {
-
-    "cat": "Qlutensiz Dessertlər",
-    "name": "Tiramisu",
-    "price": "8 ₼",
-    "img": "tiramisu.jpg"
-  
-}
-,
-  {
-
-    "cat": "Qlutensiz Dessertlər",
+    "cat": "Populyar",
     "name": "Ballı Tort",
-    "price": "8 ₼",
+    "desc": "Bal, un, yumurta, stevia, xama, kərə yağı",
+    "price": "10,00 AZN",
     "img": "balli-tort.jpg"
   
 }
 ,
   {
 
-    "cat": "Qlutensiz Dessertlər",
-    "name": "Diet San Sebastian",
-    "price": "8.5 ₼",
-    "img": "diet-san-sebastian.jpg"
-  
-}
-,
-  {
-
-    "cat": "Qlutensiz Dessertlər",
-    "name": "Pistachio San Sebastian",
-    "price": "8.5 ₼",
-    "img": "pistachio-san-sebastian.jpg"
-  
-}
-,
-  {
-
-    "cat": "Qlutensiz Dessertlər",
-    "name": "Lotus Cheesecake",
-    "price": "8.5 ₼",
-    "img": "lotus-cheesecake.jpg"
-  
-}
-,
-  {
-
-    "cat": "Qlutensiz Dessertlər",
-    "name": "Karamel Cheesecake",
-    "price": "8.5 ₼",
-    "img": "karamel-cheesecake.jpg"
-  
-}
-,
-  {
-
-    "cat": "Qlutensiz Dessertlər",
-    "name": "Malina Cheesecake",
-    "price": "8.5 ₼",
-    "img": "malina-cheesecake.jpg"
-  
-}
-,
-  {
-
-    "cat": "Qlutensiz Dessertlər",
-    "name": "Pistachio Krep",
-    "price": "8.5 ₼",
-    "img": "pistachio-krep.jpg"
-  
-}
-,
-  {
-
-    "cat": "Qlutensiz Dessertlər",
-    "name": "Giləmeyvə Krep",
-    "price": "8.5 ₼",
-    "img": "gilemeyve-krep.jpg"
-  
-}
-,
-  {
-
-    "cat": "Qlutensiz Dessertlər",
-    "name": "Çiyələk Krep",
-    "price": "8.5 ₼",
-    "img": "ciyelek-krep.jpg"
-  
-}
-,
-  {
-
-    "cat": "Qlutensiz Dessertlər",
-    "name": "Şokoladlı Krep",
-    "price": "8.5 ₼",
-    "img": "sokoladli-krep.jpg"
-  
-}
-,
-  {
-
-    "cat": "Klassik Qəhvə",
-    "name": "Double Espresso",
-    "price": "4 ₼",
-    "img": "double-espresso.jpg"
-  
-}
-,
-  {
-
-    "cat": "Klassik Qəhvə",
-    "name": "Americano",
-    "price": "5–6 ₼",
-    "img": "americano.jpg"
-  
-}
-,
-  {
-
-    "cat": "Klassik Qəhvə",
-    "name": "Cortado",
-    "price": "5.5 ₼",
-    "img": "cortado.jpg"
-  
-}
-,
-  {
-
-    "cat": "Klassik Qəhvə",
+    "cat": "Populyar",
     "name": "Cappuccino",
-    "price": "5.5–6.5 ₼",
+    "desc": "Qəhvə, bol köpüklü süd",
+    "price": "6,50 AZN",
     "img": "cappuccino.jpg"
   
 }
 ,
   {
 
-    "cat": "Klassik Qəhvə",
+    "cat": "Populyar",
+    "name": "Americano",
+    "desc": "Qəhvə və su",
+    "price": "5,80 AZN",
+    "img": "americano.jpg"
+  
+}
+,
+  {
+
+    "cat": "Populyar",
     "name": "Latte",
-    "price": "5.5–6.5 ₼",
+    "desc": "Qəhvə, süd",
+    "price": "6,50 AZN",
     "img": "latte.jpg"
   
 }
 ,
   {
 
-    "cat": "Klassik Qəhvə",
+    "cat": "Populyar",
+    "name": "Orange Fresh",
+    "desc": "3 ədəd portağal",
+    "price": "11,00 AZN",
+    "img": "orange-fresh.jpg"
+  
+}
+,
+  {
+
+    "cat": "Populyar",
+    "name": "Acatenango - Qvatemala",
+    "desc": "100% Arabica, Qvatemalanın Acatenango bölgəsindən. Dad Notları: alma, tünd şokolad, karamel. Espresso Proses: Yuyulmuş. Hündürlük: 1800 M",
+    "price": "20,00 AZN",
+    "img": "acatenango-qvatemala.jpg"
+  
+}
+,
+  {
+
+    "cat": "Populyar",
+    "name": "Grapefruit Fresh",
+    "desc": "2 ədəd qreyfrut",
+    "price": "11,00 AZN",
+    "img": "grapefruit-fresh.jpg"
+  
+}
+,
+  {
+
+    "cat": "Populyar",
+    "name": "Lemon Poppy Seed Cake",
+    "desc": "Buğda unu, şəkər tozu, limon, xaş-xaş",
+    "price": "7,00 AZN",
+    "img": "lemon-poppy-seed-cake.jpg"
+  
+}
+,
+  {
+
+    "cat": "Populyar",
+    "name": "Chai Tea Latte",
+    "desc": "Zəncəfil, darçın, mixək, süd",
+    "price": "7,50 AZN",
+    "img": "chai-tea-latte.jpg"
+  
+}
+,
+  {
+
+    "cat": "Populyar",
+    "name": "Guji Organic - Efiopiya",
+    "desc": "100% Arabica, Efiopiyanın Uddeyi Guji Organic bölgəsindən. Dad Notları: çiyələk, floral, qara qarağat. Filter Proses: Natural. Hündürlük: 2000 M",
+    "price": "24,00 AZN",
+    "img": "guji-organic-efiopiya.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Iced Americano",
+    "desc": "Qəhvə, su, buz",
+    "price": "7,00 AZN",
+    "img": "iced-americano.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Iced Cappucino",
+    "desc": "Qəhvə, süd, buz",
+    "price": "8,00 AZN",
+    "img": "iced-cappucino.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Iced Latte",
+    "desc": "Qəhvə, süd, buz",
+    "price": "8,00 AZN",
+    "img": "iced-latte.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Affogato",
+    "desc": "Qəhvə, dondurma",
+    "price": "7,50 AZN",
+    "img": "affogato.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Iced Spanish Latte",
+    "desc": "Qəhvə, süd, qatılaşdırılmış süd, buz",
+    "price": "8,60 AZN",
+    "img": "iced-spanish-latte.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Iced Raf",
+    "desc": "Qəhvə, süd, qaymaq, vanil siropu",
+    "price": "9,00 AZN",
+    "img": "iced-raf.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Iced Salted Caramel Latte",
+    "desc": "Qəhvə, süd, duzlu karamel siropu, buz",
+    "price": "9,00 AZN",
+    "img": "iced-salted-caramel-latte.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Iced Mocha",
+    "desc": "Qəhvə, qara şokolad, süd, buz",
+    "price": "9,00 AZN",
+    "img": "iced-mocha.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Iced White Mocha",
+    "desc": "Qəhvə, ağ şokolad, süd, buz",
+    "price": "9,00 AZN",
+    "img": "iced-white-mocha.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Cold Chocolate",
+    "desc": "Qara şokolad, süd",
+    "price": "9,00 AZN",
+    "img": "cold-chocolate.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "White Cold Chocolate",
+    "desc": "Ağ şokolad, süd",
+    "price": "9,00 AZN",
+    "img": "white-cold-chocolate.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Black Tonic",
+    "desc": "Qəhvə, 1 ədəd tonik, buz",
+    "price": "8,60 AZN",
+    "img": "black-tonic.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Iced Chai Tea Latte",
+    "desc": "Zəncəfil, darçın, mixək, süd, buz",
+    "price": "9,00 AZN",
+    "img": "iced-chai-tea-latte.jpg"
+  
+}
+,
+  {
+
+    "cat": "Soyuq Xüsusi İçkilər",
+    "name": "Iced Matcha Latte",
+    "desc": "Matça tozu, süd, buz",
+    "price": "9,90 AZN",
+    "img": "iced-matcha-latte.jpg"
+  
+}
+,
+  {
+
+    "cat": "Limonadlar",
+    "name": "Ice Tea",
+    "desc": "Dəmlənmiş çay, seçimə uyğun dad, limon suyu, su, buz",
+    "price": "8,60 AZN",
+    "img": "ice-tea.jpg"
+  
+}
+,
+  {
+
+    "cat": "Limonadlar",
+    "name": "Hibiscus Strawberry Lemonade",
+    "desc": "Dəmlənmiş xüsusi çay, çiyələk püresi, qazlı su, buz",
+    "price": "9,00 AZN",
+    "img": "hibiscus-strawberry-lemonade.jpg"
+  
+}
+,
+  {
+
+    "cat": "Limonadlar",
+    "name": "Tropical Refresher Lemonade",
+    "desc": "Mango püre, qırmızı portağal siropu, limon suyu, qazlı su, buz",
+    "price": "9,00 AZN",
+    "img": "tropical-refresher-lemonade.jpg"
+  
+}
+,
+  {
+
+    "cat": "Limonadlar",
+    "name": "Mango Maracuya Chia Lemonade",
+    "desc": "Mango püresi, marakuya siropu, çia toxumu, limon suyu, qazlı su, buz",
+    "price": "9,50 AZN",
+    "img": "mango-maracuya-chia-lemonade.jpg"
+  
+}
+,
+  {
+
+    "cat": "Limonadlar",
+    "name": "Brazilian Lemonade",
+    "desc": "Lime, su, qatılaşdırılmış süd, buz",
+    "price": "9,50 AZN",
+    "img": "brazilian-lemonade.jpg"
+  
+}
+,
+  {
+
+    "cat": "İsti Klassiklər",
+    "name": "Double Espresso",
+    "desc": "Qəhvə",
+    "price": "4,80 AZN",
+    "img": "double-espresso.jpg"
+  
+}
+,
+  {
+
+    "cat": "İsti Klassiklər",
+    "name": "Americano",
+    "desc": "Qəhvə və su",
+    "price": "5,80 AZN",
+    "img": "americano.jpg"
+  
+}
+,
+  {
+
+    "cat": "İsti Klassiklər",
+    "name": "Cortado",
+    "desc": "Double shot qəhvə, süd",
+    "price": "6,50 AZN",
+    "img": "cortado.jpg"
+  
+}
+,
+  {
+
+    "cat": "İsti Klassiklər",
     "name": "Flat White",
-    "price": "6 ₼",
+    "desc": "Qəhvə, süd",
+    "price": "6,90 AZN",
     "img": "flat-white.jpg"
   
 }
 ,
   {
 
-    "cat": "Özəl Dəmləmə",
-    "name": "Turkish Coffee",
-    "price": "5 ₼",
-    "img": "turkish-coffee.jpg"
+    "cat": "İsti Klassiklər",
+    "name": "Cappuccino",
+    "desc": "Qəhvə, bol köpüklü süd",
+    "price": "6,50 AZN",
+    "img": "cappuccino.jpg"
   
 }
 ,
   {
 
-    "cat": "Özəl Dəmləmə",
-    "name": "Xbloom Coffee",
-    "price": "7 ₼",
-    "img": "xbloom-coffee.jpg"
+    "cat": "İsti Klassiklər",
+    "name": "Latte",
+    "desc": "Qəhvə, süd",
+    "price": "6,50 AZN",
+    "img": "latte.jpg"
   
 }
 ,
   {
 
-    "cat": "Özəl Dəmləmə",
-    "name": "Aeropress",
-    "price": "7 ₼",
-    "img": "aeropress.jpg"
-  
-}
-,
-  {
-
-    "cat": "Özəl Dəmləmə",
-    "name": "Clever Dripper",
-    "price": "7 ₼",
-    "img": "clever-dripper.jpg"
+    "cat": "İsti Klassiklər",
+    "name": "Türk Qəhvəsi",
+    "desc": "Türk qəhvəsi, su və lokum",
+    "price": "6,00 AZN",
+    "img": "turk-qehvesi.jpg"
   
 }
 ,
@@ -1338,7 +1389,8 @@ const menuItems = [
 
     "cat": "Özəl Dəmləmə",
     "name": "V60",
-    "price": "8 ₼",
+    "desc": "",
+    "price": "9,00 AZN",
     "img": "v60.jpg"
   
 }
@@ -1346,36 +1398,20 @@ const menuItems = [
   {
 
     "cat": "Özəl Dəmləmə",
-    "name": "Chemex for 2",
-    "price": "12 ₼",
-    "img": "chemex-for-2.jpg"
+    "name": "Clever Dripper",
+    "desc": "",
+    "price": "9,00 AZN",
+    "img": "clever-dripper.jpg"
   
 }
 ,
   {
 
-    "cat": "Xüsusi İçkilər",
-    "name": "Raf",
-    "price": "7.5 ₼",
-    "img": "raf.jpg"
-  
-}
-,
-  {
-
-    "cat": "Xüsusi İçkilər",
-    "name": "Irish Latte",
-    "price": "7.5 ₼",
-    "img": "irish-latte.jpg"
-  
-}
-,
-  {
-
-    "cat": "Xüsusi İçkilər",
-    "name": "Spanish Latte",
-    "price": "7.5 ₼",
-    "img": "spanish-latte.jpg"
+    "cat": "Özəl Dəmləmə",
+    "name": "Aeropress",
+    "desc": "",
+    "price": "9,00 AZN",
+    "img": "aeropress.jpg"
   
 }
 ,
@@ -1383,7 +1419,8 @@ const menuItems = [
 
     "cat": "Xüsusi İçkilər",
     "name": "Macadamia Nuts Latte",
-    "price": "7.5 ₼",
+    "desc": "Qəhvə, süd, makadamiya siropu, qara şokolad",
+    "price": "8,60 AZN",
     "img": "macadamia-nuts-latte.jpg"
   
 }
@@ -1391,197 +1428,279 @@ const menuItems = [
   {
 
     "cat": "Xüsusi İçkilər",
-    "name": "Salted Caramel Latte",
-    "price": "7.5 ₼",
-    "img": "salted-caramel-latte.jpg"
-  
-}
-,
-  {
-
-    "cat": "Şokolad",
-    "name": "Hot Chocolate",
-    "price": "6.5–7.5 ₼",
-    "img": "hot-chocolate.jpg"
-  
-}
-,
-  {
-
-    "cat": "Şokolad",
-    "name": "White Hot Chocolate",
-    "price": "6.5–7.5 ₼",
-    "img": "white-hot-chocolate.jpg"
-  
-}
-,
-  {
-
-    "cat": "Şokolad",
-    "name": "White Mocha",
-    "price": "6.5–7.5 ₼",
-    "img": "white-mocha.jpg"
-  
-}
-,
-  {
-
-    "cat": "Şokolad",
     "name": "Caffe Mocha",
-    "price": "6.5–7.5 ₼",
+    "desc": "Qəhvə, qara şokolad tozu, süd",
+    "price": "7,50 AZN",
     "img": "caffe-mocha.jpg"
   
 }
 ,
   {
 
-    "cat": "Frappe",
-    "name": "Sweet Cookie",
-    "price": "8.5 ₼",
-    "img": "sweet-cookie-frappe.jpg"
-  
-}
-,
-  {
-
-    "cat": "Frappe",
-    "name": "White Strawberry",
-    "price": "8.5 ₼",
-    "img": "white-strawberry-frappe.jpg"
-  
-}
-,
-  {
-
-    "cat": "Frappe",
-    "name": "Special Nut",
-    "price": "8.5 ₼",
-    "img": "special-nut-frappe.jpg"
-  
-}
-,
-  {
-
-    "cat": "Lemonade",
-    "name": "Italian Soda",
-    "price": "6.5 ₼",
-    "img": "italian-soda.jpg"
-  
-}
-,
-  {
-
-    "cat": "Lemonade",
-    "name": "Iced Tea",
-    "price": "7.5 ₼",
-    "img": "iced-tea.jpg"
-  
-}
-,
-  {
-
-    "cat": "Lemonade",
-    "name": "Hibiscus Strawberry",
-    "price": "8 ₼",
-    "img": "hibiscus-strawberry.jpg"
-  
-}
-,
-  {
-
-    "cat": "Lemonade",
-    "name": "Cool Mint",
-    "price": "8 ₼",
-    "img": "cool-mint.jpg"
-  
-}
-,
-  {
-
-    "cat": "Lemonade",
-    "name": "Tropical Refresher",
-    "price": "8 ₼",
-    "img": "tropical-refresher.jpg"
-  
-}
-,
-  {
-
-    "cat": "Lemonade",
-    "name": "PineStrawberry Chia",
-    "price": "8.5 ₼",
-    "img": "pine-strawberry-chia.jpg"
-  
-}
-,
-  {
-
-    "cat": "Lemonade",
-    "name": "Passion Fruit Chia",
-    "price": "8.5 ₼",
-    "img": "passion-fruit-chia.jpg"
-  
-}
-,
-  {
-
-    "cat": "Milkshake",
-    "name": "Chocolate Cookies",
-    "price": "8.5 ₼",
-    "img": "chocolate-cookies-milkshake.jpg"
-  
-}
-,
-  {
-
-    "cat": "Milkshake",
-    "name": "Strawberry Banana",
-    "price": "8.5 ₼",
-    "img": "strawberry-banana-milkshake.jpg"
-  
-}
-,
-  {
-
-    "cat": "Milkshake",
-    "name": "Golden Caramel",
-    "price": "8.5 ₼",
-    "img": "golden-caramel-milkshake.jpg"
-  
-}
-,
-  {
-
-    "cat": "Soyuq Şokolad",
-    "name": "Mocha",
-    "price": "8 ₼",
-    "img": "cold-mocha.jpg"
-  
-}
-,
-  {
-
-    "cat": "Soyuq Şokolad",
+    "cat": "Xüsusi İçkilər",
     "name": "White Mocha",
-    "price": "8 ₼",
-    "img": "cold-white-mocha.jpg"
+    "desc": "Qəhvə, ağ şokolad, süd",
+    "price": "7,50 AZN",
+    "img": "white-mocha.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Şokolad",
-    "name": "Cold Chocolate",
-    "price": "8 ₼",
-    "img": "cold-chocolate.jpg"
+    "cat": "Xüsusi İçkilər",
+    "name": "Salted Pistachio Latte",
+    "desc": "Duzlu püstə, qəhvə, süd, şəkər",
+    "price": "9,00 AZN",
+    "img": "salted-pistachio-latte.jpg"
+  
+}
+,
+  {
+
+    "cat": "Xüsusi İçkilər",
+    "name": "Organic Citrus Raf",
+    "desc": "Portağal, qəhvə, süd, qaymaq",
+    "price": "9,00 AZN",
+    "img": "organic-citrus-raf.jpg"
+  
+}
+,
+  {
+
+    "cat": "Xüsusi İçkilər",
+    "name": "Raf",
+    "desc": "Qəhvə, süd, qaymaq, vanil siropu",
+    "price": "8,60 AZN",
+    "img": "raf.jpg"
+  
+}
+,
+  {
+
+    "cat": "Xüsusi İçkilər",
+    "name": "Spanish Latte",
+    "desc": "Qəhvə, qatılaşdırılmış süd, süd",
+    "price": "8,60 AZN",
+    "img": "spanish-latte.jpg"
+  
+}
+,
+  {
+
+    "cat": "Xüsusi İçkilər",
+    "name": "Irish Latte",
+    "desc": "İrlandiya fındığı, meşə fındığı, ağ şokolad, qəhvə, süd",
+    "price": "8,60 AZN",
+    "img": "irish-latte.jpg"
+  
+}
+,
+  {
+
+    "cat": "Non-Coffee",
+    "name": "Çay - Ümumi",
+    "desc": "İsti su və seçilmiş çay",
+    "price": "6,00 AZN",
+    "img": "cay-umumi.jpg"
+  
+}
+,
+  {
+
+    "cat": "Non-Coffee",
+    "name": "Matcha Latte",
+    "desc": "Matça tozu, süd",
+    "price": "7,50 AZN",
+    "img": "matcha-latte.jpg"
+  
+}
+,
+  {
+
+    "cat": "Non-Coffee",
+    "name": "Chai Tea Latte",
+    "desc": "Zəncəfil, darçın, mixək, süd",
+    "price": "7,50 AZN",
+    "img": "chai-tea-latte.jpg"
+  
+}
+,
+  {
+
+    "cat": "Non-Coffee",
+    "name": "Hot Chocolate",
+    "desc": "Qara şokolad, süd",
+    "price": "7,50 AZN",
+    "img": "hot-chocolate.jpg"
+  
+}
+,
+  {
+
+    "cat": "Non-Coffee",
+    "name": "White Hot Chocolate",
+    "desc": "Ağ şokolad, süd",
+    "price": "7,50 AZN",
+    "img": "white-hot-chocolate.jpg"
+  
+}
+,
+  {
+
+    "cat": "Desertlər",
+    "name": "Cherry Karpatka",
+    "desc": "Buğda unu, yumurta, şəkər tozu, orqanik vişnə, kərə yağı",
+    "price": "10,50 AZN",
+    "img": "cherry-karpatka.jpg"
+  
+}
+,
+  {
+
+    "cat": "Desertlər",
+    "name": "Lemon Poppy Seed Cake",
+    "desc": "Buğda unu, şəkər tozu, limon, xaş-xaş",
+    "price": "7,00 AZN",
+    "img": "lemon-poppy-seed-cake.jpg"
+  
+}
+,
+  {
+
+    "cat": "Desertlər",
+    "name": "Walnut Banana Bread",
+    "desc": "Banan, qoz ləpəsi, belçika şokoladı, şəkər, buğda unu",
+    "price": "6,00 AZN",
+    "img": "walnut-banana-bread.jpg"
+  
+}
+,
+  {
+
+    "cat": "Desertlər",
+    "name": "Chocolate Lover's Brownie",
+    "desc": "2 növ belçika şokoladı, un, kərə yağı, kakao, qatılaşdırılmış süd",
+    "price": "10,50 AZN",
+    "img": "chocolate-lover-s-brownie.jpg"
+  
+}
+,
+  {
+
+    "cat": "Desertlər",
+    "name": "Chocolate Chip Cookie",
+    "desc": "2 növ belçika şokoladı, kakao, yumurta, buğda unu, kərə yağı",
+    "price": "6,50 AZN",
+    "img": "chocolate-chip-cookie.jpg"
+  
+}
+,
+  {
+
+    "cat": "Desertlər",
+    "name": "San Sebastian",
+    "desc": "Un, krem pendir, şəkər, yumurta, qaymaq",
+    "price": "10,00 AZN",
+    "img": "san-sebastian.jpg"
+  
+}
+,
+  {
+
+    "cat": "Desertlər",
+    "name": "Coffee Lover's Tiramisu",
+    "desc": "Buğda unu, maskarpone pendiri, qəhvə, şəkər tozu, yumurta, kakao",
+    "price": "10,50 AZN",
+    "img": "coffee-lover-s-tiramisu.jpg"
+  
+}
+,
+  {
+
+    "cat": "Dietik Desertlər",
+    "name": "Dietik San Sebastian",
+    "desc": "Mascarpone pendiri, krem pendir, qaymaq və stevia, üzərində malina və ya çiyələk",
+    "price": "10,50 AZN",
+    "img": "dietik-san-sebastian.jpg"
+  
+}
+,
+  {
+
+    "cat": "Dietik Desertlər",
+    "name": "Malina Çizkeyk",
+    "desc": "Qlütensiz yulaf unlu peçenyə, yağsız pendirli şəkərsiz krem, çiyələk və malina püresi",
+    "price": "10,00 AZN",
+    "img": "malina-cizkeyk.jpg"
+  
+}
+,
+  {
+
+    "cat": "Dietik Desertlər",
+    "name": "Çiyələkli Krep",
+    "desc": "Badam və yulaf unundan krep, şəkərsiz qaymaqlı vanilli krem, çiyələk və malina püresi",
+    "price": "10,50 AZN",
+    "img": "ciyelekli-krep.jpg"
+  
+}
+,
+  {
+
+    "cat": "Dietik Desertlər",
+    "name": "Giləmeyvə Krep",
+    "desc": "Şəkərsiz və unsuz bilinçik xəmiri, qarağat cemi, bişmiş krem",
+    "price": "10,50 AZN",
+    "img": "gilemeyve-krep.jpg"
+  
+}
+,
+  {
+
+    "cat": "Dietik Desertlər",
+    "name": "Ballı Tort",
+    "desc": "Bal, un, yumurta, stevia, xama, kərə yağı",
+    "price": "10,00 AZN",
+    "img": "balli-tort.jpg"
+  
+}
+,
+  {
+
+    "cat": "Sendviç və Rollar",
+    "name": "Pesto Souslu Toyuq Sendviç",
+    "desc": "NOPA-nın özəl pesto sousu, toyuq, quru pomidor, qauda pendiri, kahı",
+    "price": "10,50 AZN",
+    "img": "pesto-souslu-toyuq-sendvic.jpg"
+  
+}
+,
+  {
+
+    "cat": "Sendviç və Rollar",
+    "name": "Beef Çeddar Sendviç",
+    "desc": "Hisə verilmiş mal əti, çeddar pendiri, fresh pomidor, kahı, xardallı şüyüdlü sous",
+    "price": "11,00 AZN",
+    "img": "beef-ceddar-sendvic.jpg"
+  
+}
+,
+  {
+
+    "cat": "Sendviç və Rollar",
+    "name": "Hindi Füme Sendviç",
+    "desc": "Hisə verilmiş hinduşka əti, kahı, çeddar pendiri, fresh xiyar",
+    "price": "10,50 AZN",
+    "img": "hindi-fume-sendvic.jpg"
   
 }
 ,
   {
 
     "cat": "Fresh Bar",
-    "name": "Orange",
-    "price": "7.5 ₼",
+    "name": "Orange Fresh",
+    "desc": "3 ədəd portağal",
+    "price": "11,00 AZN",
     "img": "orange-fresh.jpg"
   
 }
@@ -1589,189 +1708,190 @@ const menuItems = [
   {
 
     "cat": "Fresh Bar",
-    "name": "Citrus Mix",
-    "price": "7.5 ₼",
-    "img": "citrus-mix.jpg"
+    "name": "Grapefruit Fresh",
+    "desc": "2 ədəd qreyfrut",
+    "price": "11,00 AZN",
+    "img": "grapefruit-fresh.jpg"
   
 }
 ,
   {
 
     "cat": "Fresh Bar",
-    "name": "Citrus Black",
-    "price": "9.5 ₼",
-    "img": "citrus-black.jpg"
+    "name": "Citrus Mix Fresh",
+    "desc": "1 ədəd qreyfrut, 2 ədəd portağal",
+    "price": "11,60 AZN",
+    "img": "citrus-mix-fresh.jpg"
   
 }
 ,
   {
 
-    "cat": "Çay",
-    "name": "Tea",
-    "price": "5 ₼",
-    "img": "tea.jpg"
+    "cat": "Fresh Bar",
+    "name": "Citrus Black Fresh",
+    "desc": "3 ədəd portağal, karamel siropu, double shot espresso",
+    "price": "12,00 AZN",
+    "img": "citrus-black-fresh.jpg"
   
 }
 ,
   {
 
-    "cat": "Çay",
-    "name": "Chai Tea Latte",
-    "price": "6.5–7.5 ₼",
-    "img": "chai-tea-latte.jpg"
+    "cat": "Milkşeyklər",
+    "name": "Chocolate Cookies Milkshake",
+    "desc": "Ağ şokolad, qara şokolad, oreo, dondurma, buz",
+    "price": "9,50 AZN",
+    "img": "chocolate-cookies-milkshake.jpg"
   
 }
 ,
   {
 
-    "cat": "Çay",
-    "name": "Matcha Latte",
-    "price": "6.5–7.5 ₼",
-    "img": "matcha-latte.jpg"
+    "cat": "Milkşeyklər",
+    "name": "Golden Caramel Milkshake",
+    "desc": "Karamel siropu, süd, dondurma, buz",
+    "price": "9,50 AZN",
+    "img": "golden-caramel-milkshake.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Klassik",
-    "name": "Espresso On Ice",
-    "price": "4 ₼",
-    "img": "espresso-on-ice.jpg"
+    "cat": "Milkşeyklər",
+    "name": "Banana Shake Milkshake",
+    "desc": "Banan, süd, dondurma, buz",
+    "price": "9,50 AZN",
+    "img": "banana-shake-milkshake.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Klassik",
-    "name": "Americano",
-    "price": "6 ₼",
-    "img": "ice-americano.jpg"
+    "cat": "Milkşeyklər",
+    "name": "Creamy Strawberry Milkshake",
+    "desc": "Çiyələk siropu, süd, dondurma, buz",
+    "price": "9,50 AZN",
+    "img": "creamy-strawberry-milkshake.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Klassik",
-    "name": "Cold Brew",
-    "price": "6.5 ₼",
-    "img": "cold-brew.jpg"
+    "cat": "Frappe",
+    "name": "Sweet Cookie Frappe",
+    "desc": "Ağ şokolad, qara şokolad, oreo, qəhvə, süd, buz",
+    "price": "9,50 AZN",
+    "img": "sweet-cookie-frappe.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Klassik",
-    "name": "Cappuccino",
-    "price": "7 ₼",
-    "img": "ice-cappuccino.jpg"
+    "cat": "Frappe",
+    "name": "White Strawberry Frappe",
+    "desc": "Ağ şokolad, çiyələk püresi, süd, qəhvə, buz",
+    "price": "9,50 AZN",
+    "img": "white-strawberry-frappe.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Klassik",
-    "name": "Latte",
-    "price": "7 ₼",
-    "img": "ice-latte.jpg"
+    "cat": "Frappe",
+    "name": "Special Nut Frappe",
+    "desc": "Qara şokolad, ağ şokolad, snickers, fındıq siropu, süd, qəhvə, buz",
+    "price": "9,50 AZN",
+    "img": "special-nut-frappe.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Özəl İçki",
-    "name": "Affogato",
-    "price": "6.5 ₼",
-    "img": "affogato.jpg"
+    "cat": "Kofe Dənələri",
+    "name": "Laderas - Kolumbiya",
+    "desc": "100% Arabica, Kolumbiyanın Laderas bölgəsindən. Dad notları: portağal, tünd şokolad, tropik meyvələr. Filter Proses: Natural. Hündürlük: 1900 M",
+    "price": "27,00 AZN",
+    "img": "laderas-kolumbiya.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Özəl İçki",
-    "name": "Spanish Latte",
-    "price": "7.5 ₼",
-    "img": "ice-spanish-latte.jpg"
+    "cat": "Kofe Dənələri",
+    "name": "Bukuham - Efiopiya",
+    "desc": "100% Arabica, Efiyopiyanın Buku Hambela bölgəsindən. Aroma: berqamot, floral, meyvəmsi, südlü şokolad. Filter Anaerobik, natural. Hündürlük: 2200 M",
+    "price": "21,50 AZN",
+    "img": "bukuham-efiopiya.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Özəl İçki",
-    "name": "Black Tonic",
-    "price": "7.5 ₼",
-    "img": "black-tonic.jpg"
+    "cat": "Kofe Dənələri",
+    "name": "Acatenango - Qvatemala",
+    "desc": "100% Arabica, Qvatemalanın Acatenango bölgəsindən. Dad Notları: alma, tünd şokolad, karamel. Espresso Proses: Yuyulmuş. Hündürlük: 1800 M",
+    "price": "20,00 AZN",
+    "img": "acatenango-qvatemala.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Özəl İçki",
-    "name": "Salted Caramel Latte",
-    "price": "8 ₼",
-    "img": "ice-salted-caramel-latte.jpg"
+    "cat": "Kofe Dənələri",
+    "name": "Guji Organic - Efiopiya",
+    "desc": "100% Arabica, Efiopiyanın Uddeyi Guji Organic bölgəsindən. Dad Notları: çiyələk, floral, qara qarağat. Filter Proses: Natural. Hündürlük: 2000 M",
+    "price": "24,00 AZN",
+    "img": "guji-organic-efiopiya.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Özəl İçki",
-    "name": "Raf",
-    "price": "8 ₼",
-    "img": "ice-raf.jpg"
+    "cat": "Merchandise",
+    "name": "V60",
+    "desc": "",
+    "price": "45,00 AZN",
+    "img": "v60.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Özəl İçki",
-    "name": "Chai Tea Latte",
-    "price": "8 ₼",
-    "img": "ice-chai-tea-latte.jpg"
+    "cat": "Merchandise",
+    "name": "NOPA Ceramic Mug",
+    "desc": "",
+    "price": "45,00 AZN",
+    "img": "nopa-ceramic-mug.jpg"
   
 }
 ,
   {
 
-    "cat": "Soyuq Özəl İçki",
-    "name": "Iced Matcha",
-    "price": "8.5 ₼",
-    "img": "iced-matcha.jpg"
+    "cat": "Soft Drinks",
+    "name": "San Pellegrino Sparkling Natural Mineral Water",
+    "desc": "",
+    "price": "7,00 AZN",
+    "img": "san-pellegrino-sparkling-natural-mineral-water.jpg"
   
 }
 ,
   {
 
-    "cat": "Extras",
-    "name": "Syrup",
-    "price": "2 ₼",
-    "img": "syrup.jpg"
+    "cat": "Soft Drinks",
+    "name": "Sirab Sparkling Premium Water",
+    "desc": "",
+    "price": "5,00 AZN",
+    "img": "sirab-sparkling-premium-water.jpg"
   
 }
 ,
   {
 
-    "cat": "Extras",
-    "name": "Extra Shot",
-    "price": "2.5 ₼",
-    "img": "extra-shot.jpg"
-  
-}
-,
-  {
-
-    "cat": "Extras",
-    "name": "Alternative Milk",
-    "price": "3 ₼",
-    "img": "alternative-milk.jpg"
-  
-}
-,
-  {
-
-    "cat": "Extras",
-    "name": "Whipped Cream",
-    "price": "2 ₼",
-    "img": "whipped-cream.jpg"
+    "cat": "Soft Drinks",
+    "name": "Sirab Premium Still Water",
+    "desc": "",
+    "price": "5,00 AZN",
+    "img": "sirab-premium-still-water.jpg"
   
 }
 
@@ -1873,7 +1993,8 @@ translateCategory(item.cat)
 translateCategory(item.cat)
 }
 </div>
-<div class="menu-card-top"><h3>${
+<div class="menu-card-top">
+<h3>${
 item.name
 }
 </h3>
@@ -1881,7 +2002,12 @@ item.name
 item.price
 }
 </div>
-</div></div>`;
+</div>
+<p class="menu-desc">${
+item.desc || ""
+}
+</p>
+</div>`;
 grid.appendChild(card);
 
 }
@@ -1919,5 +2045,6 @@ setTimeout(observeAnimations,300);
 </script>
 </body>
 </html>
+
 
 
